@@ -33,4 +33,4 @@
 </ul>
 
 <h2> Helsinki University of Technology (now part of Aalto University)</h2>
-Teacher and teaching assistant on many courses.   
+Teaching/teaching assistance on several courses and course instances.
