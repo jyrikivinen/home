@@ -6,8 +6,9 @@ parts:
   - caption: Profile
     chapters:
     - file: personal/biography
-  - caption: Publications
+  - caption: Research
     chapters:
-    - file: personal/list_of_publications
-
-
+    - file: research/list_of_publications
+  - caption: Teaching
+    chapters:
+    - file: teaching/list_of_courses
