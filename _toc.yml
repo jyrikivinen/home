@@ -1,0 +1,13 @@
+# Table of contents
+# ------------------
+format: jb-book
+root: intro
+parts: 
+  - caption: Profile
+    chapters:
+    - file: personal/biography
+  - caption: Publications
+    chapters:
+    - file: personal/list_of_publications
+
+

@@ -1,0 +1,26 @@
+# Metadata
+# -------------
+title: "Jyri Kivinen"
+author: "Jyri Kivinen"
+copyright: "2023"
+
+# Execution settings
+# -------------------
+execute:
+  execute_notebooks: off
+
+# GitHub-settings
+# ----------------
+repository:
+  url: https://github.com/jyrikivinen/home
+  branch: main
+
+# HTML-settings and launch buttons
+# ---------------------------------
+html:
+  use_issues_button: false
+  use_repository_button: false
+launch_buttons:
+  thebe: false
+  colab_url: "https://colab.research.google.com"
+  binderhub_url: "https://mybinder.org"
