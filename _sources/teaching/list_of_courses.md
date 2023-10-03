@@ -28,6 +28,3 @@
 * Teacher-in-charge: <a href="https://mycourses.aalto.fi/course/view.php?id=16963">CS-E4890 - Deep Learning, 2017</a>
 * Teacher of the course: <a href="https://mycourses.aalto.fi/course/view.php?id=15054">CS-E4050 - Special Course in Machine Learning and Data Science V (P), Autumn 2016 (Deep Learning)</a>   
 * One of the teachers: <a href="https://mycourses.aalto.fi/course/view.php?id=8861">T-61.6050 - Special Course in Computer and Information Science V P, Autumn 2015 (Deep Learning)</a>
-
-## Helsinki University of Technology (now part of Aalto University)
-Teaching/teaching assistance on several courses and course instances.
