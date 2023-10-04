@@ -394,7 +394,7 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="logistic-distribution-specification-parameter-estimation-sampling">
 <h1>Logistic distribution: specification, parameter estimation, sampling<a class="headerlink" href="#logistic-distribution-specification-parameter-estimation-sampling" title="Permalink to this heading">#</a></h1>
-<p>Description: Mostly some quick notes on/basics of, the logistic distribution and its connection to the logistic sigmoid function. The methods adopted (for example for parameter estimation, or the effectiveness evaluation) are not suggested to be ones to adopt in practical uses.</p>
+<p>Description: Mostly some quick notes on and basics of, the logistic distribution and its connection to the logistic sigmoid function, with some demonstrations.</p>
 <p>Author: Jyri Kivinen (<a class="reference external" href="mailto:jyri&#46;kivinen&#37;&#52;&#48;lapinamk&#46;fi">jyri<span>&#46;</span>kivinen<span>&#64;</span>lapinamk<span>&#46;</span>fi</a>)</p>
 <p>Version: Draft as of 4 October, 2023.</p>
 <div class="cell docutils container">
@@ -409,9 +409,8 @@ document.write(`
 </div>
 <section id="logistic-sigmoid-function">
 <h2>Logistic sigmoid function<a class="headerlink" href="#logistic-sigmoid-function" title="Permalink to this heading">#</a></h2>
-<p>The function can be written as \begin{equation*}\mathrm{sig}(x)=\frac{1}{1+\exp{{-x}}}.\end{equation*}
-A long-standing and widely used application of the function is in
-specifying the activation or the probability of activation of neuron,
+<p>The function can be written as <span class="math notranslate nohighlight">\(\mathrm{sig}(x)=\frac{1}{1+\exp{\{-x\}}}.\)</span>
+A long-standing and widely used application of the function is in specifying the activation or the probability of activation of a neuron,
 in the context of artificial neural networks. Below we implement to evaluate the function and also plot it.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -424,13 +423,13 @@ in the context of artificial neural networks. Below we implement to evaluate the
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/2cde10b01c5400e2a3eb65d731b13cf57e53742fc9f114a2f8c19768f9d852c3.png" src="../_images/2cde10b01c5400e2a3eb65d731b13cf57e53742fc9f114a2f8c19768f9d852c3.png" />
+<img alt="../_images/8045bcdf923b84fe961fd5d0d49fb9aaada39d07589f591a34f0384f04ee6a4f.png" src="../_images/8045bcdf923b84fe961fd5d0d49fb9aaada39d07589f591a34f0384f04ee6a4f.png" />
 </div>
 </div>
 </section>
 <section id="a-more-general-form">
 <h2>A more general form<a class="headerlink" href="#a-more-general-form" title="Permalink to this heading">#</a></h2>
-<p>Let us consider the generalization $<span class="math notranslate nohighlight">\(\mathrm{sig}(x; \mu, s)=\frac{1}{1+\exp{\{-(x-\mu)/s}\}}.\)</span>$</p>
+<p>Let us consider the generalization <span class="math notranslate nohighlight">\(\mathrm{sig}(x; \mu, s)=\frac{1}{1+\exp{\{-(x-\mu)/s}\}}.\)</span></p>
 <p>Obviously with <span class="math notranslate nohighlight">\(\mu=0\)</span> and <span class="math notranslate nohighlight">\(s=1\)</span> we recover the standard expression. It can be conceived that this could be used, e.g.,<br />
 in dealing with distributional shifts, or for example multitask/transfer learning; the <span class="math notranslate nohighlight">\(x\)</span> could be the linear response
 by the canonical network unit, and the <span class="math notranslate nohighlight">\(\mu\)</span> and <span class="math notranslate nohighlight">\(s\)</span> would be (additional, perhaps class-specific and particularly shared) parameters to tune - in the context of fine-tuning, an obvious strategy would be to introduce and initialize the values of shifting and scaling parameters so that the standard expression is obtained. Perhaps such has been already done.</p>
@@ -439,9 +438,9 @@ it is cumulative distribution of the logistic distribution.</p>
 </section>
 <section id="the-logistic-distribution">
 <h2>The logistic distribution<a class="headerlink" href="#the-logistic-distribution" title="Permalink to this heading">#</a></h2>
-<p>The cumulative distribution function of the distribution is $<span class="math notranslate nohighlight">\(P(x|\mu, s)=\frac{1}{1+\exp{\{-(x-\mu)/s}\}}=\mathrm{sig}(x; \mu, s).\)</span><span class="math notranslate nohighlight">\(
-We can obtain the probability density function by differentiation: \)</span><span class="math notranslate nohighlight">\(p(x|\mu, s)=\frac{d}{dx}P(x|\mu, s).\)</span>$</p>
-<p>With a bit of algebra, we obtain that $<span class="math notranslate nohighlight">\(p(x|\mu, s)=\frac{1}{s}\mathrm{sig}(x; \mu, s)(1-\mathrm{sig}(x; \mu, s)).\)</span>$</p>
+<p>The cumulative distribution function of the distribution is <span class="math notranslate nohighlight">\(P(x|\mu, s)=\frac{1}{1+\exp{\{-(x-\mu)/s}\}}=\mathrm{sig}(x; \mu, s).\)</span></p>
+<p>We can obtain the probability density function by differentiation: <span class="math notranslate nohighlight">\(p(x|\mu, s)=\frac{d}{dx}P(x|\mu, s).\)</span></p>
+<p>With a bit of algebra, we obtain that <span class="math notranslate nohighlight">\(p(x|\mu, s)=\frac{1}{s}\mathrm{sig}(x; \mu, s)(1-\mathrm{sig}(x; \mu, s)).\)</span></p>
 <p>Below we implement Python-functions to evaluate the functions, and plot the probability density function and cumulative distribution function with several parameter value configurations.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -479,13 +478,13 @@ We can obtain the probability density function by differentiation: \)</span><spa
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/4b55efe334d6a21422862d8b061dbab5e9ac96fc6f836afbb8da8e1e7110e31d.png" src="../_images/4b55efe334d6a21422862d8b061dbab5e9ac96fc6f836afbb8da8e1e7110e31d.png" />
+<img alt="../_images/b4f025af9321570d95461d469a2435ab790f2a3db9b51400511e64bf83e82201.png" src="../_images/b4f025af9321570d95461d469a2435ab790f2a3db9b51400511e64bf83e82201.png" />
 </div>
 </div>
 </section>
 <section id="sampling-from-the-distribution-comparing-histogram-of-samples-to-pdf">
 <h2>Sampling from the distribution, comparing histogram of samples to pdf<a class="headerlink" href="#sampling-from-the-distribution-comparing-histogram-of-samples-to-pdf" title="Permalink to this heading">#</a></h2>
-<p>In order to draw samples, we can use the inverse-CDF method; to draw a sample, we draw a sample from a uniform distribution, <span class="math notranslate nohighlight">\(\dot{u}\sim \mathrm U(0, 1)\)</span>, and see for which random variable value the cumulative density function of the logistic distribution obtains the value, i.e., evaluate the inverse of the cumulative density function also known as the quantile function, at <span class="math notranslate nohighlight">\(\dot{u}\)</span>. The quantile function, is easily obtained, and can be written as $<span class="math notranslate nohighlight">\(Q(y; \mu, s) = \mu + s \log{\{y/(1-y)\}}.\)</span>$</p>
+<p>In order to draw samples, we can use the inverse-CDF method; to draw a sample, we draw a sample from a uniform distribution, <span class="math notranslate nohighlight">\(\dot{u}\sim \mathrm U(0, 1)\)</span>, and see for which random variable value the cumulative density function of the logistic distribution obtains the value, i.e., evaluate the inverse of the cumulative density function also known as the quantile function, at <span class="math notranslate nohighlight">\(\dot{u}\)</span>. The quantile function, is easily obtained, and can be written as <span class="math notranslate nohighlight">\(Q(y; \mu, s) = \mu + s \log{\{y/(1-y)\}}.\)</span></p>
 <p>Below we implement a Python-function to draw samples from the distribution, and utilize it to draw samples from logistic distributions. We also compare density estimates via histograms of samples to the analytical pdfs, graphically via density (estimate) curves.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -520,7 +519,7 @@ We can obtain the probability density function by differentiation: \)</span><spa
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/a7698008a070ea3d03ff8b286c625b085c56470c3f8be30a2eeab9d3f98bab8f.png" src="../_images/a7698008a070ea3d03ff8b286c625b085c56470c3f8be30a2eeab9d3f98bab8f.png" />
+<img alt="../_images/57d732fe14ff4e686f814b74aa47f27a1af82895eaf63a8ac27600ffc0890660.png" src="../_images/57d732fe14ff4e686f814b74aa47f27a1af82895eaf63a8ac27600ffc0890660.png" />
 </div>
 </div>
 </section>
@@ -584,7 +583,7 @@ We can obtain the probability density function by differentiation: \)</span><spa
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/584a3fdfd5a59843ee5bc36aedc2c9371ebea2a23a6a3fb95b0abbe04bfbc990.png" src="../_images/584a3fdfd5a59843ee5bc36aedc2c9371ebea2a23a6a3fb95b0abbe04bfbc990.png" />
+<img alt="../_images/fe5f23e23f6a77b4d4df4407730de83eab383782eb15396b18be6fd907dcd688.png" src="../_images/fe5f23e23f6a77b4d4df4407730de83eab383782eb15396b18be6fd907dcd688.png" />
 </div>
 </div>
 </section>
