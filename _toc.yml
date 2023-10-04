@@ -12,3 +12,8 @@ parts:
   - caption: Teaching
     chapters:
     - file: teaching/list_of_courses
+  - caption: Computational notes
+    chapters:
+    - file: computational_notes/information
+    - file: computational_notes/logistic_distribution
+  
