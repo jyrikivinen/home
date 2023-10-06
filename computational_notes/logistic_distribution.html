@@ -397,7 +397,7 @@ document.write(`
 <p>Description: Mostly some quick notes on and basics of, the logistic distribution and its connection to the logistic sigmoid function, with some demonstrations.</p>
 <p>Author: Jyri Kivinen (<a class="reference external" href="mailto:jyri&#46;kivinen&#37;&#52;&#48;lapinamk&#46;fi">jyri<span>&#46;</span>kivinen<span>&#64;</span>lapinamk<span>&#46;</span>fi</a>)</p>
 <p>Version: Draft as of 6 October, 2023.</p>
-<p>Version history: Initial version published on 4 Oct. 2023, few updates thereafter.</p>
+<p>Version history: Initial version published on 4 Oct. 2023, some updates thereafter.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># library imports</span>
@@ -455,9 +455,8 @@ in the context of artificial neural networks. Below we implement to evaluate the
 <h2>The logistic distribution<a class="headerlink" href="#the-logistic-distribution" title="Permalink to this heading">#</a></h2>
 <p>The cumulative distribution function of the distribution is <span class="math notranslate nohighlight">\(P(x|\mu, s)=\frac{1}{1+\mathrm{exp}{\{-(x-\mu)/s}\}}=\mathrm{sig}(x; \mu, s).\)</span></p>
 <p>We can obtain the probability density function by differentiation: <span class="math notranslate nohighlight">\(p(x|\mu, s)=\frac{\mathrm{d}}{\mathrm{dx}}P(x|\mu, s).\)</span></p>
-<p>With also a bit of algebra, we can obtain that<br><center>
-<span class="math notranslate nohighlight">\(p(x|\mu, s)=\frac{\mathrm{d}}{\mathrm{dx}}\mathrm{sig}(x; \mu, s)=\frac{1}{s}\mathrm{sig}(x; \mu, s)(1-\mathrm{sig}(x; \mu, s)).\)</span></p>
-<p>Note how simply and nicely the functional form of the derivative of the logistic sigmoid function changes by the generalization; the classical/standard form is obtained by plugging in <span class="math notranslate nohighlight">\(\mu=0\)</span>, <span class="math notranslate nohighlight">\(s=1\)</span>.</p>
+<p>With also a bit of algebra, we can obtain that <span class="math notranslate nohighlight">\(p(x|\mu, s)=\frac{1}{s}\mathrm{sig}(x; \mu, s)(1-\mathrm{sig}(x; \mu, s)).\)</span></p>
+<p>Note that this also equals to <span class="math notranslate nohighlight">\(\frac{\mathrm{d}}{\mathrm{dx}}\mathrm{sig}(x; \mu, s)\)</span> and how simply and nicely the form changes by the generalization; the classical/standard form is obtained by plugging in <span class="math notranslate nohighlight">\(\mu=0\)</span>, <span class="math notranslate nohighlight">\(s=1\)</span>.</p>
 <p>Below we implement Python-functions to evaluate the functions, and plot the probability density function and cumulative distribution function with several parameter value configurations. As we can see, the parameter <span class="math notranslate nohighlight">\(\mu\)</span> is a location parameter, and <span class="math notranslate nohighlight">\(s\)</span> controls the scale (which needs to be positive).</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
