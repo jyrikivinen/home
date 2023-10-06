@@ -455,7 +455,8 @@ in the context of artificial neural networks. Below we implement to evaluate the
 <h2>The logistic distribution<a class="headerlink" href="#the-logistic-distribution" title="Permalink to this heading">#</a></h2>
 <p>The cumulative distribution function of the distribution is <span class="math notranslate nohighlight">\(P(x|\mu, s)=\frac{1}{1+\mathrm{exp}{\{-(x-\mu)/s}\}}=\mathrm{sig}(x; \mu, s).\)</span></p>
 <p>We can obtain the probability density function by differentiation: <span class="math notranslate nohighlight">\(p(x|\mu, s)=\frac{\mathrm{d}}{\mathrm{dx}}P(x|\mu, s).\)</span></p>
-<p>With also a bit of algebra, we can obtain that \begin{equation}p(x|\mu, s)=\frac{\mathrm{d}}{\mathrm{dx}}\mathrm{sig}(x; \mu, s)=\frac{1}{s}\mathrm{sig}(x; \mu, s)(1-\mathrm{sig}(x; \mu, s)).\end{equation}</p>
+<p>With also a bit of algebra, we can obtain that<br><center>
+<span class="math notranslate nohighlight">\(p(x|\mu, s)=\frac{\mathrm{d}}{\mathrm{dx}}\mathrm{sig}(x; \mu, s)=\frac{1}{s}\mathrm{sig}(x; \mu, s)(1-\mathrm{sig}(x; \mu, s)).\)</span></p>
 <p>Note how simply and nicely the functional form of the derivative of the logistic sigmoid function changes by the generalization; the classical/standard form is obtained by plugging in <span class="math notranslate nohighlight">\(\mu=0\)</span>, <span class="math notranslate nohighlight">\(s=1\)</span>.</p>
 <p>Below we implement Python-functions to evaluate the functions, and plot the probability density function and cumulative distribution function with several parameter value configurations. As we can see, the parameter <span class="math notranslate nohighlight">\(\mu\)</span> is a location parameter, and <span class="math notranslate nohighlight">\(s\)</span> controls the scale (which needs to be positive).</p>
 <div class="cell docutils container">
