@@ -394,7 +394,6 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="logistic-distribution-unit-specification-parameter-estimation-sampling">
 <h1>Logistic distribution (unit): specification, parameter estimation, sampling<a class="headerlink" href="#logistic-distribution-unit-specification-parameter-estimation-sampling" title="Permalink to this heading">#</a></h1>
-<p>Description: Mostly some quick notes on and basics of, the logistic distribution and its connection to the logistic sigmoid function, with some demonstrations.</p>
 <p>Author: Jyri Kivinen (<a class="reference external" href="mailto:jyri&#46;kivinen&#37;&#52;&#48;lapinamk&#46;fi">jyri<span>&#46;</span>kivinen<span>&#64;</span>lapinamk<span>&#46;</span>fi</a>)</p>
 <p>Version: Draft as of 6 October, 2023.</p>
 <p>Version history: Initial version published on 4 Oct. 2023, some updates thereafter.</p>
@@ -448,7 +447,7 @@ in the context of artificial neural networks. Below we implement to evaluate the
 <img alt="../_images/5c0dccba1bc870208d2e5a3f69aac4a26b8d56cae529874e4739e87f13412e85.png" src="../_images/5c0dccba1bc870208d2e5a3f69aac4a26b8d56cae529874e4739e87f13412e85.png" />
 </div>
 </div>
-<p>We can see that <span class="math notranslate nohighlight">\(\mu\)</span> shifts and <span class="math notranslate nohighlight">\(s\)</span> streches the graph. It can be conceived that the generalization could be used, e.g., in dealing with distributional shifts, or for example multitask/transfer learning; the could be the linear response by the canonical network unit, and the and would be (additional, perhaps class/task-specific and particularly shared) parameters to tune - in the context of fine-tuning, an obvious strategy would be to introduce and initialize the values of shifting and scaling parameters so that the standard expression is obtained. Perhaps such has been already done.</p>
+<p>We can see that <span class="math notranslate nohighlight">\(\mu\)</span> shifts and <span class="math notranslate nohighlight">\(s\)</span> streches the graph. It can be conceived that the generalization could be used, e.g., in dealing with distributional shifts, or for example multitask/transfer learning; the <span class="math notranslate nohighlight">\(x\)</span> could be the linear response by the canonical network unit, and the <span class="math notranslate nohighlight">\(\mu\)</span> and <span class="math notranslate nohighlight">\(s\)</span> would be (additional, perhaps class/task-specific and particularly shared) parameters to tune - in the context of fine-tuning, an obvious strategy would be to introduce and initialize the values of shifting and scaling parameters so that the standard expression is obtained. Perhaps such has been already done.</p>
 <p>In the following, we will study it in a different context. We will use it in defining cumulative distribution function, and in fact it is cumulative distribution of the logistic distribution.</p>
 </section>
 <section id="the-logistic-distribution">
@@ -535,7 +534,7 @@ in the context of artificial neural networks. Below we implement to evaluate the
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/1279bee69ae26d72dbd9708c908d147809d9b2ec80e12eb4c29f6d3b5fdbf28e.png" src="../_images/1279bee69ae26d72dbd9708c908d147809d9b2ec80e12eb4c29f6d3b5fdbf28e.png" />
+<img alt="../_images/8acb587666379113d8b992fbdc6dc921439dbc6f6e245db9efef18eea977289f.png" src="../_images/8acb587666379113d8b992fbdc6dc921439dbc6f6e245db9efef18eea977289f.png" />
 </div>
 </div>
 </section>
@@ -599,7 +598,7 @@ in the context of artificial neural networks. Below we implement to evaluate the
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/4516374091b440ec9d56c25cfc2950530accba646326a4cce79d88b54a47b557.png" src="../_images/4516374091b440ec9d56c25cfc2950530accba646326a4cce79d88b54a47b557.png" />
+<img alt="../_images/0cfc6c4843e9464e8a68000d85f4688f210604f85939a729edfd4bef1d8fdba5.png" src="../_images/0cfc6c4843e9464e8a68000d85f4688f210604f85939a729edfd4bef1d8fdba5.png" />
 </div>
 </div>
 </section>
