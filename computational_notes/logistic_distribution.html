@@ -397,7 +397,7 @@ document.write(`
 <p>Description: Mostly some quick notes on and basics of, the logistic distribution and its connection to the logistic sigmoid function, with some demonstrations.</p>
 <p>Author: Jyri Kivinen (<a class="reference external" href="mailto:jyri&#46;kivinen&#37;&#52;&#48;lapinamk&#46;fi">jyri<span>&#46;</span>kivinen<span>&#64;</span>lapinamk<span>&#46;</span>fi</a>)</p>
 <p>Version: Draft as of 6 October, 2023.</p>
-<p>Version history: Initial version published on 4 Oct. 2023, few text updates thereafter.</p>
+<p>Version history: Initial version published on 4 Oct. 2023, few updates thereafter.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># library imports</span>
@@ -417,30 +417,46 @@ in the context of artificial neural networks. Below we implement to evaluate the
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="o">-</span><span class="mi">20</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span>
 <span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">nrows</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">ncols</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">[</span><span class="mi">12</span><span class="p">,</span> <span class="mi">6</span><span class="p">])</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span>  <span class="mf">1.</span><span class="o">/</span><span class="p">(</span><span class="mf">1.</span><span class="o">+</span><span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="n">x</span><span class="p">)),</span> <span class="n">linewidth</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="sa">r</span><span class="s1">&#39;$\mathrm</span><span class="si">{sig}</span><span class="s1">(x)=(1+\exp{\{-x\}})^{-1}$&#39;</span><span class="p">);</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;$x$&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">();</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span>  <span class="mf">1.</span><span class="o">/</span><span class="p">(</span><span class="mf">1.</span><span class="o">+</span><span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="n">x</span><span class="p">)),</span> <span class="n">linewidth</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;$x$&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;$\mathrm</span><span class="si">{sig}</span><span class="s1">(x)=(1+\exp{\{-x\}})^{-1}$&#39;</span><span class="p">);</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/8045bcdf923b84fe961fd5d0d49fb9aaada39d07589f591a34f0384f04ee6a4f.png" src="../_images/8045bcdf923b84fe961fd5d0d49fb9aaada39d07589f591a34f0384f04ee6a4f.png" />
+<img alt="../_images/98bd948f62968ed3013b83d23aa48a2f3df618d54716a6a6248f3a6a54adf7f3.png" src="../_images/98bd948f62968ed3013b83d23aa48a2f3df618d54716a6a6248f3a6a54adf7f3.png" />
 </div>
 </div>
 </section>
 <section id="a-more-general-form">
 <h2>A more general form<a class="headerlink" href="#a-more-general-form" title="Permalink to this heading">#</a></h2>
 <p>Let us consider the generalization <span class="math notranslate nohighlight">\(\mathrm{sig}(x; \mu, s)=\frac{1}{1+\mathrm{exp}{\{-(x-\mu)/s}\}}.\)</span></p>
-<p>Obviously with <span class="math notranslate nohighlight">\(\mu=0\)</span> and <span class="math notranslate nohighlight">\(s=1\)</span> we recover the standard expression. It can be conceived that this could be used, e.g.,  in dealing with distributional shifts, or for example multitask/transfer learning; the <span class="math notranslate nohighlight">\(x\)</span> could be the linear response by the canonical network unit, and the <span class="math notranslate nohighlight">\(\mu\)</span> and <span class="math notranslate nohighlight">\(s\)</span> would be (additional, perhaps class-specific and particularly shared) parameters to tune - in the context of fine-tuning, an obvious strategy would be to introduce and initialize the values of shifting and scaling parameters so that the standard expression is obtained. Perhaps such has been already done.</p>
-<p>In the following, we will study it in a different context. We will use it in defining cumulative distribution function, and in fact
-it is cumulative distribution of the logistic distribution.</p>
+<p>Obviously with <span class="math notranslate nohighlight">\(\mu=0\)</span> and <span class="math notranslate nohighlight">\(s=1\)</span> we recover the standard expression. Let us plot it with also some other values of the variables/parameters.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="o">-</span><span class="mi">20</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span>
+<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">nrows</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">ncols</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">[</span><span class="mi">12</span><span class="p">,</span> <span class="mi">6</span><span class="p">])</span>
+<span class="k">for</span> <span class="n">mu</span><span class="p">,</span> <span class="n">s</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">5</span><span class="p">],[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">]):</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span>  <span class="mf">1.</span><span class="o">/</span><span class="p">(</span><span class="mf">1.</span><span class="o">+</span><span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="p">(</span><span class="n">x</span><span class="o">-</span><span class="n">mu</span><span class="p">)</span><span class="o">/</span><span class="n">s</span><span class="p">)),</span> <span class="n">linewidth</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;$\mu=</span><span class="si">{}</span><span class="s1">, s=</span><span class="si">{}</span><span class="s1">$&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">mu</span><span class="p">,</span> <span class="n">s</span><span class="p">));</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;$x$&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;$\mathrm</span><span class="si">{sig}</span><span class="s1">(x)=(1+\exp{\{-(x-\mu)/s\}})^{-1}$&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">();</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/5c0dccba1bc870208d2e5a3f69aac4a26b8d56cae529874e4739e87f13412e85.png" src="../_images/5c0dccba1bc870208d2e5a3f69aac4a26b8d56cae529874e4739e87f13412e85.png" />
+</div>
+</div>
+<p>We can see that <span class="math notranslate nohighlight">\(\mu\)</span> shifts and <span class="math notranslate nohighlight">\(s\)</span> streches the graph. It can be conceived that the generalization could be used, e.g., in dealing with distributional shifts, or for example multitask/transfer learning; the could be the linear response by the canonical network unit, and the and would be (additional, perhaps class/task-specific and particularly shared) parameters to tune - in the context of fine-tuning, an obvious strategy would be to introduce and initialize the values of shifting and scaling parameters so that the standard expression is obtained. Perhaps such has been already done.</p>
+<p>In the following, we will study it in a different context. We will use it in defining cumulative distribution function, and in fact it is cumulative distribution of the logistic distribution.</p>
 </section>
 <section id="the-logistic-distribution">
 <h2>The logistic distribution<a class="headerlink" href="#the-logistic-distribution" title="Permalink to this heading">#</a></h2>
 <p>The cumulative distribution function of the distribution is <span class="math notranslate nohighlight">\(P(x|\mu, s)=\frac{1}{1+\mathrm{exp}{\{-(x-\mu)/s}\}}=\mathrm{sig}(x; \mu, s).\)</span></p>
 <p>We can obtain the probability density function by differentiation: <span class="math notranslate nohighlight">\(p(x|\mu, s)=\frac{\mathrm{d}}{\mathrm{dx}}P(x|\mu, s).\)</span></p>
-<p>With also a bit of algebra, we can obtain that <span class="math notranslate nohighlight">\(p(x|\mu, s)=\frac{\mathrm{d}}{\mathrm{dx}}\mathrm{sig}(x; \mu, s)=\frac{1}{s}\mathrm{sig}(x; \mu, s)(1-\mathrm{sig}(x; \mu, s)).\)</span></p>
-<p>Note how simply and nicely the functional form of the derivative of the sigmoid function changes by the generalization; the classical/standard form is obtained by plugging in <span class="math notranslate nohighlight">\(\mu=0\)</span>, <span class="math notranslate nohighlight">\(s=1\)</span>.</p>
+<p>With also a bit of algebra, we can obtain that \begin{equation}p(x|\mu, s)=\frac{\mathrm{d}}{\mathrm{dx}}\mathrm{sig}(x; \mu, s)=\frac{1}{s}\mathrm{sig}(x; \mu, s)(1-\mathrm{sig}(x; \mu, s)).\end{equation}</p>
+<p>Note how simply and nicely the functional form of the derivative of the logistic sigmoid function changes by the generalization; the classical/standard form is obtained by plugging in <span class="math notranslate nohighlight">\(\mu=0\)</span>, <span class="math notranslate nohighlight">\(s=1\)</span>.</p>
 <p>Below we implement Python-functions to evaluate the functions, and plot the probability density function and cumulative distribution function with several parameter value configurations. As we can see, the parameter <span class="math notranslate nohighlight">\(\mu\)</span> is a location parameter, and <span class="math notranslate nohighlight">\(s\)</span> controls the scale (which needs to be positive).</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -478,7 +494,7 @@ it is cumulative distribution of the logistic distribution.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/b4f025af9321570d95461d469a2435ab790f2a3db9b51400511e64bf83e82201.png" src="../_images/b4f025af9321570d95461d469a2435ab790f2a3db9b51400511e64bf83e82201.png" />
+<img alt="../_images/4b55efe334d6a21422862d8b061dbab5e9ac96fc6f836afbb8da8e1e7110e31d.png" src="../_images/4b55efe334d6a21422862d8b061dbab5e9ac96fc6f836afbb8da8e1e7110e31d.png" />
 </div>
 </div>
 </section>
@@ -519,7 +535,7 @@ it is cumulative distribution of the logistic distribution.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/57d732fe14ff4e686f814b74aa47f27a1af82895eaf63a8ac27600ffc0890660.png" src="../_images/57d732fe14ff4e686f814b74aa47f27a1af82895eaf63a8ac27600ffc0890660.png" />
+<img alt="../_images/1279bee69ae26d72dbd9708c908d147809d9b2ec80e12eb4c29f6d3b5fdbf28e.png" src="../_images/1279bee69ae26d72dbd9708c908d147809d9b2ec80e12eb4c29f6d3b5fdbf28e.png" />
 </div>
 </div>
 </section>
@@ -577,13 +593,13 @@ it is cumulative distribution of the logistic distribution.</p>
         <span class="n">label</span><span class="o">=</span><span class="sa">r</span><span class="s1">&#39;True: $\mu=</span><span class="si">{}</span><span class="s1">, s=</span><span class="si">{}</span><span class="s1">$&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">loc</span><span class="p">,</span> <span class="n">scale</span><span class="p">),</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.5</span><span class="p">)</span>
 <span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">probability_density_function</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">loc</span><span class="o">=</span><span class="n">loc_est</span><span class="p">,</span> <span class="n">scale</span><span class="o">=</span><span class="n">scale_est</span><span class="p">),</span> <span class="n">color</span><span class="o">=</span><span class="n">linecolor</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s1">&#39;dashed&#39;</span><span class="p">,</span> 
         <span class="n">label</span><span class="o">=</span><span class="sa">r</span><span class="s1">&#39;Estimate: $\mu=</span><span class="si">{}</span><span class="s1">, s=</span><span class="si">{}</span><span class="s1">$&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="n">loc_est</span><span class="p">,</span> <span class="mi">2</span><span class="p">),</span> <span class="n">np</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="n">scale_est</span><span class="p">,</span> <span class="mi">2</span><span class="p">)),</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.5</span><span class="p">)</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">set_ylim</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="mf">0.2</span><span class="p">]);</span> <span class="n">ax</span><span class="o">.</span><span class="n">set_xlim</span><span class="p">([</span><span class="o">-</span><span class="mi">30</span><span class="p">,</span> <span class="mi">20</span><span class="p">]);</span> <span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;$x$&#39;</span><span class="p">);</span> <span class="n">ax</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_ylim</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="mf">0.2</span><span class="p">]);</span> <span class="n">ax</span><span class="o">.</span><span class="n">set_xlim</span><span class="p">([</span><span class="o">-</span><span class="mi">20</span><span class="p">,</span> <span class="mi">20</span><span class="p">]);</span> <span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;$x$&#39;</span><span class="p">);</span> <span class="n">ax</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
 <span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;Comparison of true vs. estimated distribution; $D_</span><span class="si">{KL}</span><span class="s1">(p||q)$ estimate: &#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="n">KL_divergence_est</span><span class="p">,</span> <span class="mi">5</span><span class="p">)));</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/fe5f23e23f6a77b4d4df4407730de83eab383782eb15396b18be6fd907dcd688.png" src="../_images/fe5f23e23f6a77b4d4df4407730de83eab383782eb15396b18be6fd907dcd688.png" />
+<img alt="../_images/4516374091b440ec9d56c25cfc2950530accba646326a4cce79d88b54a47b557.png" src="../_images/4516374091b440ec9d56c25cfc2950530accba646326a4cce79d88b54a47b557.png" />
 </div>
 </div>
 </section>
