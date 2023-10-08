@@ -381,7 +381,12 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#assessment-of-estimation-effectiveness">Assessment of estimation effectiveness</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#appendix-some-further-details-on-the-math">Appendix: some further details on the math</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#appendix-some-further-details-derivations">Appendix: some further details, derivations</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-partial-derivatives">The (partial) derivatives</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-quantile-function">The quantile function</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-kullback-leibler-divergence-estimate">The Kullback-Leibler divergence estimate</a></li>
+</ul>
+</li>
 </ul>
             </nav>
         </div>
@@ -396,7 +401,7 @@ document.write(`
   <section class="tex2jax_ignore mathjax_ignore" id="logistic-distribution-unit-specification-parameter-estimation-sampling">
 <h1>Logistic distribution (unit): specification, parameter estimation, sampling<a class="headerlink" href="#logistic-distribution-unit-specification-parameter-estimation-sampling" title="Permalink to this heading">#</a></h1>
 <p>Author: Jyri Kivinen (<a class="reference external" href="mailto:jyri&#46;kivinen&#37;&#52;&#48;lapinamk&#46;fi">jyri<span>&#46;</span>kivinen<span>&#64;</span>lapinamk<span>&#46;</span>fi</a>)</p>
-<p>Version: Draft as of 7 October, 2023.</p>
+<p>Version: Draft as of 8 October, 2023.</p>
 <p>Version history: Initial version published on 4 Oct. 2023, some updates thereafter.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -456,7 +461,7 @@ in the context of artificial neural networks. Below we implement to evaluate the
 <p>The cumulative distribution function of the distribution is <span class="math notranslate nohighlight">\(P(x|\mu, s)=\frac{1}{1+\mathrm{exp}{\{-(x-\mu)/s}\}}=\mathrm{sig}(x; \mu, s).\)</span></p>
 <p>We can obtain the probability density function by differentiation: <span class="math notranslate nohighlight">\(p(x|\mu, s)=\frac{\mathrm{d}}{\mathrm{dx}}P(x|\mu, s).\)</span></p>
 <p>With also a bit of algebra, we can obtain that <span class="math notranslate nohighlight">\(p(x|\mu, s)=\frac{1}{s}\mathrm{sig}(x; \mu, s)(1-\mathrm{sig}(x; \mu, s)).\)</span></p>
-<p>Note that this also equals to <span class="math notranslate nohighlight">\(\frac{\mathrm{d}}{\mathrm{dx}}\mathrm{sig}(x; \mu, s)\)</span> and how simply and nicely the form changes by the generalization; the classical/standard form is obtained by plugging in <span class="math notranslate nohighlight">\(\mu=0\)</span>, <span class="math notranslate nohighlight">\(s=1\)</span>.</p>
+<p>The form may not be previously that well-known (for example, <a href="https://en.wikipedia.org/wiki/Logistic_distribution">Wikipedia, page generated 8 Oct., 2023</a> does not mention it), but I find it a natural one in the neural networks/machine learning context. Note that the expression also equals to <span class="math notranslate nohighlight">\(\frac{\mathrm{d}}{\mathrm{dx}}\mathrm{sig}(x; \mu, s)\)</span> and how simply and nicely the form changes by the generalization; the classical/standard form is obtained by plugging in <span class="math notranslate nohighlight">\(\mu=0\)</span>, <span class="math notranslate nohighlight">\(s=1\)</span>. See Appendix for further derivations.</p>
 <p>Below we implement Python-functions to evaluate the functions, and plot the probability density function and cumulative distribution function with several parameter value configurations. As we can see, the parameter <span class="math notranslate nohighlight">\(\mu\)</span> is a location parameter, and <span class="math notranslate nohighlight">\(s\)</span> controls the scale (which needs to be positive).</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -500,7 +505,7 @@ in the context of artificial neural networks. Below we implement to evaluate the
 </section>
 <section id="sampling-from-the-distribution-comparing-histogram-of-samples-to-pdf">
 <h2>Sampling from the distribution, comparing histogram of samples to pdf<a class="headerlink" href="#sampling-from-the-distribution-comparing-histogram-of-samples-to-pdf" title="Permalink to this heading">#</a></h2>
-<p>In order to draw samples, we can use the inverse-CDF method; to draw a sample, we draw a sample from a uniform distribution, <span class="math notranslate nohighlight">\(\dot{u}\sim \mathrm U(0, 1)\)</span>, and see for which random variable value the cumulative distribution function of the logistic distribution obtains the value, i.e., evaluate the inverse of the cumulative distribution function also known as the quantile function, at <span class="math notranslate nohighlight">\(\dot{u}\)</span>. The quantile function, is easily obtained, and can be written as <span class="math notranslate nohighlight">\(Q(y| \mu, s) = \mu + s \log{\{y/(1-y)\}}.\)</span></p>
+<p>In order to draw samples, we can use the inverse-CDF method; to draw a sample, we draw a sample from a uniform distribution, <span class="math notranslate nohighlight">\(\dot{u}\sim \mathrm U(0, 1)\)</span>, and see for which random variable value the cumulative distribution function of the logistic distribution obtains the value, i.e., evaluate the inverse of the cumulative distribution function also known as the quantile function, at <span class="math notranslate nohighlight">\(\dot{u}\)</span>. The quantile function, is easily obtained (see e.g. the Appendix), and can be written as <span class="math notranslate nohighlight">\(Q(y| \mu, s) = \mu + s \log{\{y/(1-y)\}}.\)</span></p>
 <p>Below we implement a Python-function to draw samples from the distribution, and utilize it to draw samples from logistic distributions. We also compare density estimates via histograms of samples to the analytical pdfs, graphically via density (estimate) curves.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -544,7 +549,7 @@ in the context of artificial neural networks. Below we implement to evaluate the
 <p>Here, we use the method of moments as the estimation method, to estimate the distribution parameter values <span class="math notranslate nohighlight">\(\mu\)</span> and <span class="math notranslate nohighlight">\(s\)</span> from data. Mean and variance of the logistic distribution are <span class="math notranslate nohighlight">\(\mu\)</span> and <span class="math notranslate nohighlight">\(\frac{(s\pi)^2}{3}\)</span>, respectively (<a href="https://en.wikipedia.org/wiki/Logistic_distribution">Wikipedia, page generated 4 Oct., 2023</a>). Let <span class="math notranslate nohighlight">\(\bar{x}=\frac{1}{N}\sum_{n=1}^{N}{x^{(n)}}\)</span> denote the empirical mean, and <span class="math notranslate nohighlight">\(S^2=\frac{1}{N-1}\sum_{n=1}^{N}(x^{(n)}-\bar{x})^2\)</span> the empirical variance.</p>
 <p>Matching the empirical moments to the theoretical ones, we have that <span class="math notranslate nohighlight">\(\hat{\mu}=\bar{x}\)</span>, and <span class="math notranslate nohighlight">\(\frac{(\hat{s}\pi)^2}{3} = S^2\)</span>.</p>
 <p>Therefore, we find that our estimate for the mean <span class="math notranslate nohighlight">\(\hat{\mu}=\bar{x}\)</span> and the estimate for the scale parameter <span class="math notranslate nohighlight">\(\hat{s}=\frac{\sqrt{3S^2}}{\pi}.\)</span></p>
-<p>Below, we apply the estimation in the context of a particular logistic distribution: We define the parameter values of the distribution, draw samples from it and apply the method of moments to estimate the parameter values from the samples. We also assess the estimation effectiveness, qualitatively by plotting the true and estimated distributions, and quantitatively by an approximation to the Kullback-Leibler divergence of true to estimated distribution, via Monte Carlo.</p>
+<p>Below, we apply the estimation in the context of a particular logistic distribution: We define the parameter values of the distribution, draw samples from it and apply the method of moments to estimate the parameter values from the samples. We also assess the estimation effectiveness, qualitatively by plotting the true and estimated distributions, and quantitatively by an approximation to the Kullback-Leibler divergence of true to estimated distribution, via Monte Carlo (see Appendix for the math).</p>
 <section id="model-definition-sampling-estimation-from-samples">
 <h3>Model definition, sampling, estimation from samples<a class="headerlink" href="#model-definition-sampling-estimation-from-samples" title="Permalink to this heading">#</a></h3>
 <div class="cell docutils container">
@@ -604,10 +609,22 @@ in the context of artificial neural networks. Below we implement to evaluate the
 </div>
 </section>
 </section>
-<section id="appendix-some-further-details-on-the-math">
-<h2>Appendix: some further details on the math<a class="headerlink" href="#appendix-some-further-details-on-the-math" title="Permalink to this heading">#</a></h2>
+<section id="appendix-some-further-details-derivations">
+<h2>Appendix: some further details, derivations<a class="headerlink" href="#appendix-some-further-details-derivations" title="Permalink to this heading">#</a></h2>
+<section id="the-partial-derivatives">
+<h3>The (partial) derivatives<a class="headerlink" href="#the-partial-derivatives" title="Permalink to this heading">#</a></h3>
 <p>The expression <span class="math notranslate nohighlight">\(\frac{\mathrm{d}}{\mathrm{dx}}\mathrm{sig}(x; \mu, s)=\frac{1}{s}\mathrm{sig}(x; \mu, s)(1-\mathrm{sig}(x; \mu, s))\)</span> is, as well as
 the derivatives of <span class="math notranslate nohighlight">\(\mathrm{sig}(x; \mu, s)\)</span> w.r.t. <span class="math notranslate nohighlight">\(\mu\)</span> and <span class="math notranslate nohighlight">\(s\)</span> are, straightforward to obtain from the fact that <span class="math notranslate nohighlight">\(\frac{\mathrm{d}}{\mathrm{dx}}\mathrm{sig}(x)=\mathrm{sig}(x)(1-\mathrm{sig}(x))\)</span>. This is because for example <span class="math notranslate nohighlight">\(\mathrm{sig}(x;\mu, s)=\mathrm{sig}((x-\mu)/s)\)</span> and that <span class="math notranslate nohighlight">\(\frac{\mathrm{d}}{\mathrm{dx}}\mathrm{sig}((x-\mu)/s)=\frac{\mathrm{d}}{\mathrm{d (x-\mu)/s}}\mathrm{sig}((x-\mu)/s)\frac{\mathrm{d}}{\mathrm{dx}}(x-\mu)/s\)</span> which simplifies to <span class="math notranslate nohighlight">\(\mathrm{sig}((x-\mu)/s)(1-\mathrm{sig}((x-\mu)/s))\frac{1}{s}\)</span>, and can be then rewritten as <span class="math notranslate nohighlight">\(\frac{1}{s}\mathrm{sig}(x; \mu, s)(1-\mathrm{sig}(x; \mu, s))\)</span>.</p>
+<p>Deriving <span class="math notranslate nohighlight">\(\frac{\mathrm{d}}{\mathrm{dx}}\mathrm{sig}(x)=\mathrm{sig}(x)(1-\mathrm{sig}(x))\)</span> can be done as follows: Starting from <span class="math notranslate nohighlight">\(\frac{\mathrm{d}}{\mathrm{dx}}\mathrm{sig}(x)=\frac{\mathrm{d}}{\mathrm{dx}}(1+\mathrm{exp}{\{-x}\})^{-1}\)</span>, we obtain that these equal to <span class="math notranslate nohighlight">\((-1)\cdot (1+\mathrm{exp}{\{-x}\})^{-2}\cdot\mathrm{exp}{\{-x}\}\cdot(-1)\)</span>. This can be written as <span class="math notranslate nohighlight">\(\left(\frac{1}{1+\mathrm{exp}{\{-x}\}}\right)\left(\frac{\mathrm{exp}{\{-x}\}}{1+\mathrm{exp}{\{-x}\}}\right)\)</span>, a product of two terms. The term on the right <span class="math notranslate nohighlight">\(\frac{\mathrm{exp}{\{-x}\}}{1+\mathrm{exp}{\{-x}\}}=\frac{1+\mathrm{exp}{\{-x}\}-1}{1+\mathrm{exp}{\{-x}\}}\)</span>, which we can write as <span class="math notranslate nohighlight">\(1-\frac{1}{1+\mathrm{exp}{\{-x}\}}\)</span>. Plugging in the definition <span class="math notranslate nohighlight">\(\frac{1}{1+\mathrm{exp}{\{-x}\}}=\mathrm{sig}(x)\)</span> to both of the two terms mentioned, we arrive to the result <span class="math notranslate nohighlight">\(\frac{\mathrm{d}}{\mathrm{dx}}\mathrm{sig}(x)=\mathrm{sig}(x)(1-\mathrm{sig}(x))\)</span>.</p>
+</section>
+<section id="the-quantile-function">
+<h3>The quantile function<a class="headerlink" href="#the-quantile-function" title="Permalink to this heading">#</a></h3>
+<p>Let us start with the equation <span class="math notranslate nohighlight">\(y=\frac{1}{1+\mathrm{exp}{\{-a}\}}\)</span>. Multiplying both sides by <span class="math notranslate nohighlight">\((1+\mathrm{exp}{\{-a}\})\)</span>, and then expanding and moving terms yields that <span class="math notranslate nohighlight">\(\mathrm{exp}{\{-a\}}=\frac{1-y}{y}\)</span>. Taking the natural logarithm of both sides, we get that <span class="math notranslate nohighlight">\(-a=\mathrm{log}{\{(1-y)/y\}}\)</span> and so <span class="math notranslate nohighlight">\(a=\mathrm{log}{\{y/(1-y)\}}\)</span>. Letting <span class="math notranslate nohighlight">\(a\)</span> equal to <span class="math notranslate nohighlight">\((x-\mu)/s\)</span> we obtain that <span class="math notranslate nohighlight">\(\frac{1}{s}(x-\mu)=\mathrm{log}{\{y/(1-y)\}}\)</span>, from which we get that <span class="math notranslate nohighlight">\(x=\mu + s \cdot\mathrm{log}{\{y/(1-y)\}}\)</span>. Thus we obtain that the inverse function, of the cumulative distribution function <span class="math notranslate nohighlight">\((1+\mathrm{exp}{\{-a}\})^{-1}=(1+\mathrm{exp}{\{-(x-\mu)/s}\})^{-1}\)</span> which equals to <span class="math notranslate nohighlight">\(\mathrm{sig}(x; \mu, s)=P(x| \mu, s)\)</span>, is thus <span class="math notranslate nohighlight">\(Q(y; \mu, s)=\mu + s\cdot\mathrm{log}{\{y/(1-y)\}}\)</span>. Of course the result applies for valid values of the variables.</p>
+</section>
+<section id="the-kullback-leibler-divergence-estimate">
+<h3>The Kullback-Leibler divergence estimate<a class="headerlink" href="#the-kullback-leibler-divergence-estimate" title="Permalink to this heading">#</a></h3>
+<p>The Kullback-Leibler divergence of true to estimated distribution <span class="math notranslate nohighlight">\(\mathrm{D_{KL}}(p(X|\mu, s)||p(X|\hat{\mu}, \hat{s}))=\int_{\mathcal{X}}p(x|\mu, s)\mathrm{log}{\left\{\frac{p(x|\mu, s)}{p(x|\hat{\mu}, \hat{s})}\right\}}~dx\)</span>. This can be written as <span class="math notranslate nohighlight">\(\mathbb{E}_{x~\sim p(X|\mu, s)}\mathrm{log}{\left\{\frac{p(x|\mu, s)}{p(x|\hat{\mu}, \hat{s})}\right\}}\)</span> which is equal to <span class="math notranslate nohighlight">\(\mathbb{E}_{x~\sim p(X|\mu, s)}\left[\mathrm{log}{p(x|\mu, s)}-\mathrm{log}{p(x|\hat{\mu}, \hat{s})}\right]\)</span>. Then utilizing Monte Carlo estimation, we obtain that <span class="math notranslate nohighlight">\(\mathbb{E}_{x~\sim p(X|\mu, s)}\simeq \frac{1}{N}\sum_{n=1}^{N}\left[\mathrm{log}{p(x^{(n)}|\mu, s)}-\mathrm{log}{p(x^{(n)}|\hat{\mu}, \hat{s})}\right],\)</span> where <span class="math notranslate nohighlight">\(x^{(n)}\sim p(X|\mu, s)\)</span>, a sample from the true distribution.</p>
+</section>
 </section>
 </section>
 
@@ -674,7 +691,12 @@ the derivatives of <span class="math notranslate nohighlight">\(\mathrm{sig}(x; 
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#assessment-of-estimation-effectiveness">Assessment of estimation effectiveness</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#appendix-some-further-details-on-the-math">Appendix: some further details on the math</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#appendix-some-further-details-derivations">Appendix: some further details, derivations</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-partial-derivatives">The (partial) derivatives</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-quantile-function">The quantile function</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-kullback-leibler-divergence-estimate">The Kullback-Leibler divergence estimate</a></li>
+</ul>
+</li>
 </ul>
   </nav></div>
 
