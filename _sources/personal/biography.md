@@ -1,3 +1,3 @@
 # Biography
 
-Jyri Kivinen is a Full-time Teacher at Lapland University of Applied Sciences. He received his MSc (Tech) in Computer and Information Science from Helsinki University of Technology, and his PhD in Informatics (Machine Learning) from the University of Edinburgh.
+Jyri Kivinen is a Full-time Teacher at Lapland University of Applied Sciences. He received his MSc (Tech) in Computer and Information Science from Helsinki University of Technology, and his PhD in Informatics (Machine Learning) from the University of Edinburgh. After his PhD, he held post-doctoral positions at the Université de Montréal (at the Laboratoire d'informatique des systèmes adaptatifs (LISA), now <a href="https://mila.quebec/en/">Mila</a>) and Aalto University (at the <a href="https://research.cs.aalto.fi/bayes/index.shtml">Deep Learning and Bayesian Modelling group</a>, and at the Complex Systems group), and later was a Senior Data Scientist at GE Healthcare.
