@@ -9,6 +9,7 @@ parts:
   - caption: Research
     chapters:
     - file: research/list_of_publications
+    - file: research/projects
   - caption: Teaching
     chapters:
     - file: teaching/list_of_courses
