@@ -24,6 +24,6 @@ In Proc., IEEE International Conference on Image Processing (ICIP),<br> Septembe
 
 ### Drafts
 
-* <a href="documents/kivinen+sudderth+jordan_hdp-hmt_journal_article_draft">Hierarhical Dirichlet Process Hidden Markov Trees for Multiscale Image Analysis</a><br>
+* <a href="documents/kivinen+sudderth+jordan_hdp-hmt_journal_article_draft.pdf">Hierarhical Dirichlet Process Hidden Markov Trees for Multiscale Image Analysis</a><br>
 Jyri J. Kivinen, <a href="http://www.ics.uci.edu/~sudderth/">Erik B. Sudderth</font></a>, and <a href="http://www.cs.berkeley.edu/~jordan/">Michael I. Jordan</a><br>
  
