@@ -1,11 +1,11 @@
-# Thesis & project instruction
+# Thesis and project instruction
 
-## Doctoral
+## Doctoral theses
 * <a href="https://aaltodoc.aalto.fi/handle/123456789/34496">Training Methods for Climate and Neural Network Models</a><br>
 Mudassar Abbas<br>
 D.Sc. (Tech.) thesis, Aalto University, 2018
 
-## Master's 
+## Master's theses and projects
 * <a href="https://www.theseus.fi/handle/10024/789766">Tiedolla Johtaminen Ehkäisevässä Kunnossapidossa. Tapaustutkimuksena SSAB-kylmäoikaisukone</a><br>
 Mikko Krankkala<br>
 M.Eng. thesis (in Finnish), Lapland University of Applied Sciences, 2023
@@ -40,12 +40,12 @@ Susanna Kangas<br>
 M.Sc. (Tech.) thesis, Helsinki University of Technology, 2006
 * <b>Color Naming and Computational Prediction from Natural Images</b><br>
 Tuuli Nurminen<br>
-M.Sc.(Tech.) thesis, Helsinki University of Technology, 2005
+M.Sc. (Tech.) thesis, Helsinki University of Technology, 2005
 
-## Bachelor's
+## Bachelor's theses and projects
 * <b>Berry Density Prediction with Convolutional Neural Networks</b><br>
 Lucas Toirkens<br>
-Bachelor thesis, Hogeschool PXL, 2023
+Bachelor's thesis, Hogeschool PXL, 2023
 * <a href="https://www.theseus.fi/handle/10024/799592">Marjamäärien ja Koulutusdatan Analysointia Objektitunnistuksella</a><br>
 Joonas Poutanen<br>
 B.Eng. thesis (in Finnish), Lapland University of Applied Sciences, 2023
