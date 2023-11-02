@@ -13,6 +13,7 @@ parts:
   - caption: Teaching
     chapters:
     - file: teaching/list_of_courses
+    - file: teaching/thesis_instruction
   - caption: Computational notes
     chapters:
     - file: computational_notes/information
