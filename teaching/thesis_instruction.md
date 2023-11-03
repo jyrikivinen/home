@@ -30,10 +30,10 @@ Jaakko Sahlsten</br>
 MSc (Tech) thesis, Aalto University, 2018
 * <b>Visual Texture Modeling using Mixtures of Gaussian Distributions</b><br>
 Michail Rallis</br>
-Master's project, University of Edinburgh, 2012
+Master's project, The University of Edinburgh, 2012
 * <b>Learning a Hierarchical Compositional Visual Shape Vocabulary</b><br>
 Alejandro Cartas<br>
-Master's project, University of Edinburgh, 2011
+Master's project, The University of Edinburgh, 2011
 * <b>Sharpness Based Analysis of Images with Low Depth of Field and the Effect
 of Depth of Field on Image Viewing</b><br>
 Susanna Kangas<br>
