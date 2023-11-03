@@ -2,6 +2,13 @@
 
 ## Hierarchical Dirichlet Process Hidden Markov Trees
 
+We developed a nonparametric Baysian modeling framework in which data is generated via tree-structured probabilistic graphical models with latent variables, 
+whose complexity is determined in a data-driven and -adaptive way. Tree-structured graphical models have natural ties, for example to multiscale data. 
+The hierarchical Dirichlet process hidden Markov tree (HDP-HMT) framework extended prior work on, e.g., hidden Markov trees, 
+providing a principled and practical approach to determine the amounts of latent states, automatically via the use of hierarchical Dirichlet process. 
+We developed methodology for effective learning and inference with the framework, and explored applications to computational vision tasks, 
+producing state-of-the-art results (at the time). 
+
 ### Conference and workshop publications
 
 * <a href="documents/kivinen+sudderth+jordan_npbayes08_abstract.pdf">Transfer Denoising with Hierarchical Dirichlet Process Hidden Markov Trees</a><br>
