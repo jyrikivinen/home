@@ -13,13 +13,13 @@ MEng thesis (in Finnish), Lapland University of Applied Sciences, 2023
 Using Electronic Health Record and Non-Invasive Signals</a><br>
 Ali Neissi Shooshtari<br>
 MEng thesis, Arcada University of Applied Sciences, 2021
-* <a href="https://helda.helsinki.fi/items/3da1abf7-3fca-4b5b-b4f1-923b84367504">Generalizability of Machine Learning Models in Predicting Patient Deterioration</a><br>
+* <a href="http://hdl.handle.net/10138/322918">Generalizability of Machine Learning Models in Predicting Patient Deterioration</a><br>
 Niko Säkkinen<br>
 MSc thesis, University of Helsinki, 2020
 * <a href="https://aaltodoc.aalto.fi/handle/123456789/97508">Interactive decision support for intensive care unit discharge using patient similarity</a><br>
 Tuomas Koskinen<br>
 MSc (Tech) thesis, Aalto University, 2020
-* <a href="https://helda.helsinki.fi/items/671720f6-f352-4a59-b471-7ce50876a7b4">Federated Learning for Mortality Prediction in Intensive Care Units</a><br>
+* <a href="http://hdl.handle.net/10138/319631">Federated Learning for Mortality Prediction in Intensive Care Units</a><br>
 Hannu Pelttari<br>
 MSc thesis, University of Helsinki, 2020
 * <a href="https://aaltodoc.aalto.fi/handle/123456789/32506">Semi-Supervised Learning in Retinal Image Analysis</a><br>
@@ -30,10 +30,10 @@ Jaakko Sahlsten</br>
 MSc (Tech) thesis, Aalto University, 2018
 * <b>Visual Texture Modeling using Mixtures of Gaussian Distributions</b><br>
 Michail Rallis</br>
-Master's project, University of Edinburgh, 2012
+Master's project, The University of Edinburgh, 2012
 * <b>Learning a Hierarchical Compositional Visual Shape Vocabulary</b><br>
 Alejandro Cartas<br>
-Master's project, University of Edinburgh, 2011
+Master's project, The University of Edinburgh, 2011
 * <b>Sharpness Based Analysis of Images with Low Depth of Field and the Effect
 of Depth of Field on Image Viewing</b><br>
 Susanna Kangas<br>
