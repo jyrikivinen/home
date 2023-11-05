@@ -2,7 +2,7 @@
 
 ## Hierarchical Dirichlet Process Hidden Markov Trees
 
-Joint with <a href="http://www.ics.uci.edu/~sudderth/">Erik B. Sudderth</a> and <a href="http://www.cs.berkeley.edu/~jordan/">Michael I. Jordan</a>.  
+Joint work with <a href="http://www.ics.uci.edu/~sudderth/">Erik B. Sudderth</a> and <a href="http://www.cs.berkeley.edu/~jordan/">Michael I. Jordan</a>.  
 
 ```{figure} hdp-hmt_figure.png
 ---
