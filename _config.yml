@@ -10,6 +10,11 @@ logo: personal/picture.png
 execute:
   execute_notebooks: off
 
+# Citation settings
+# -----------------
+bibtex_bibfiles:
+  - references.bib
+
 # GitHub-settings
 # ----------------
 repository:

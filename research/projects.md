@@ -4,10 +4,17 @@
 
 Joint with <a href="http://www.ics.uci.edu/~sudderth/">Erik B. Sudderth</a> and <a href="http://www.cs.berkeley.edu/~jordan/">Michael I. Jordan</a>.  
 
+```{figure} hdp-hmt_figure.png
+---
+height: 320px
+name: fig:hdp-hmt_figure
+---
+```
+
 We developed a nonparametric Baysian modeling framework in which data is generated via tree-structured probabilistic graphical models with latent variables, 
 whose complexity is determined in a data-driven and -adaptive way. Tree-structured graphical models have natural ties, for example to multiscale data. 
-The hierarchical Dirichlet process hidden Markov tree (HDP-HMT) framework extended prior work on, e.g., hidden Markov trees, 
-providing a principled and practical approach to determine the amounts of latent states, automatically via the use of hierarchical Dirichlet process. 
+The hierarchical Dirichlet process hidden Markov tree (HDP-HMT) framework extended prior work on, e.g., hidden Markov trees {cite}`crouse98`, 
+providing a principled and practical approach to determine the amounts of latent states, automatically via the use of hierarchical Dirichlet process {cite}`teh06`. 
 We developed methodology for effective learning and inference with the framework, and explored applications to computational vision tasks, 
 producing state-of-the-art results (at the time). 
 
@@ -44,3 +51,9 @@ Invited talk at Information and Computer Science Forum, Helsinki University of T
 * <a href="https://ics.uci.edu/~sudderth/bnpCVPR12/slides/BNP4hdphmt.pdf">Infinite Hidden Markov Trees</a><br>
 Erik B. Sudderth<br>
 <a href="https://ics.uci.edu/~sudderth/bnpCVPR12/">Applied Bayesian Nonparametrics</a>, Tutorial Course at CVPR 2012, 17 June 2012
+
+### References
+```{bibliography}
+:filter: docname in docnames
+```
+
