@@ -11,7 +11,7 @@ name: fig:hdp-hmt_figure
 ---
 ```
 
-We developed a nonparametric Baysian modeling framework in which data is generated via tree-structured probabilistic graphical models with latent variables, 
+We developed a nonparametric Bayesian modeling framework in which data is generated via tree-structured probabilistic graphical models with latent variables, 
 whose complexity is determined in a data-driven and -adaptive way. Tree-structured graphical models have natural ties, for example to multiscale data. 
 The hierarchical Dirichlet process hidden Markov tree (HDP-HMT) framework extended prior work on, e.g., hidden Markov trees {cite}`crouse98`, 
 providing a principled and practical approach to determine the amounts of latent states, automatically via the use of hierarchical Dirichlet process {cite}`teh06`. 
@@ -25,12 +25,10 @@ Jyri J. Kivinen, Erik B. Sudderth, and Michael I. Jordan<br>
 In Nonparametric Bayes Workshop (<a href="http://npbayes.wikidot.com/">NPBayes 2008</a>) at ICML/UAI/COLT 2008, July 2008, Helsinki, Finland <br>
 <a href="documents/kivinen+sudderth+jordan_npbayes08_poster.pdf">Poster</a>, <a href="documents/kivinen+sudderth+jordan_npbayes08_spotlight.pdf">Spotlight</a>
 
-
 * <a href="https://www.icsi.berkeley.edu/icsi/node/3960">Learning Multiscale Representations of Natural Scenes Using Dirichlet Processes</a><br>
 Jyri J. Kivinen, Erik B. Sudderth, and Michael I. Jordan<br>
 In Proc., IEEE International Conference on Computer Vision (ICCV), Oct. 2007, Rio de Janeiro, Brazil <br>
 <a href="documents/kivinen+sudderth+jordan_iccv07_poster.pdf">Poster</a>
-
 
 * <a href="https://www.icsi.berkeley.edu/icsi/node/3943">Image Denoising with Nonparametric Hidden Markov Trees</a><br>
 Jyri J. Kivinen, Erik B. Sudderth, and Michael I. Jordan<br>
