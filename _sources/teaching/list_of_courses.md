@@ -15,7 +15,7 @@
 * One of two teachers: <a href="https://moodle.eoppimispalvelut.fi/course/view.php?id=12438">R504D65-3001 - Data Analytics, Spring 2022</a> 
 
 ### 2021
-* Teacher of the course: <a href="https://moodle.eoppimispalvelut.fi/course/view.php?id=9733">TELU117OJ-19005 Differential Equations (advanced, in Finnish) Autumn 2021</a> 
+* Teacher of the course: <a href="https://moodle.eoppimispalvelut.fi/course/view.php?id=9733">TELU117OJ-19005 - Differential Equations (advanced, in Finnish) Autumn 2021</a> 
 * Teacher of the course: <a href="https://moodle.eoppimispalvelut.fi/course/view.php?id=9707">R604ML90-3001 - Mathematics for Forestry Engineers (in Finnish), Autumn 2021</a>
 * Teacher of the course: <a href="https://moodle.eoppimispalvelut.fi/course/view.php?id=9734">R504TL167-3001 - Linear Algebra (advanced, in Finnish), Autumn 2021</a>
 * Teacher of the course: <a href="https://moodle.eoppimispalvelut.fi/course/view.php?id=9708">R504T46OJ-19003 - Linear Algebra (in Finnish), Autumn 2021</a>

@@ -6,7 +6,7 @@ Mudassar Abbas<br>
 DSc (Tech) thesis, Aalto University, 2018
 
 ## Master's theses and projects
-* <a href="https://www.theseus.fi/handle/10024/789766">Tiedolla Johtaminen Ehkäisevässä Kunnossapidossa. Tapaustutkimuksena SSAB-kylmäoikaisukone</a><br>
+* <a href="https://www.theseus.fi/handle/10024/789766">Knowledge Management in Preventive Maintenance. SSAB Cold Leveller as a Case Study</a><br>
 Mikko Krankkala<br>
 MEng thesis (in Finnish), Lapland University of Applied Sciences, 2023
 * <a href="https://www.theseus.fi/handle/10024/504289">Predicting Mortality of Intensive Care Patients with Machine Learning Using Electronic Health Record and Non-Invasive Signals</a><br>
@@ -33,11 +33,11 @@ Master's project, The University of Edinburgh, 2012
 * <b>Learning a Hierarchical Compositional Visual Shape Vocabulary</b><br>
 Alejandro Cartas<br>
 Master's project, The University of Edinburgh, 2011
-* <b>Sharpness Based Analysis of Images with Low Depth of Field and the Effect
+* <a href="https://aaltodoc.aalto.fi/handle/123456789/94414">Sharpness Based Analysis of Images with Low Depth of Field and the Effect
 of Depth of Field on Image Viewing</b><br>
 Susanna Kangas<br>
-MSc (Tech) thesis, Helsinki University of Technology, 2006
-* <b>Color Naming and Computational Prediction from Natural Images</b><br>
+MSc (Tech) thesis, Helsinki University of Technology, 2007
+* <a href="https://aaltodoc.aalto.fi/handle/123456789/93028">Color Naming and Computational Prediction from Natural Images</a><br>
 Tuuli Nurminen<br>
 MSc (Tech) thesis, Helsinki University of Technology, 2005
 
@@ -45,9 +45,9 @@ MSc (Tech) thesis, Helsinki University of Technology, 2005
 * <b>Berry Density Prediction with Convolutional Neural Networks</b><br>
 Lucas Toirkens<br>
 Bachelor's thesis, Hogeschool PXL, 2023
-* <a href="https://www.theseus.fi/handle/10024/799592">Marjamäärien ja Koulutusdatan Analysointia Objektitunnistuksella</a><br>
+* <a href="https://www.theseus.fi/handle/10024/799592">Analysis of Berry Counts and Training Material with Object Detection</a><br>
 Joonas Poutanen<br>
 BEng thesis (in Finnish), Lapland University of Applied Sciences, 2023
-* <a href="https://www.theseus.fi/handle/10024/787757">Tekoälypohjainen Ohjelma Objektien Havaitsemiseen</a><br>
+* <a href="https://www.theseus.fi/handle/10024/787757">An Artificial Intelligence-Based Program for Object Detection</a><br>
 Ville Kananen<br>
 BEng thesis (in Finnish), Lapland University of Applied Sciences, 2022
