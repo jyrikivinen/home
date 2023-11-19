@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Logistic distribution (unit): specification, parameter estimation, sampling &#8212; Jyri Kivinen</title>
+    <title>Logistic distribution (unit) &#8212; Jyri Kivinen</title>
   
   
   
@@ -186,7 +186,7 @@ const thebe_selector_output = ".output, .cell_output"
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Computational notes</span></p>
 <ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="information.html">Purpose of the notes</a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">Logistic distribution (unit): specification, parameter estimation, sampling</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Logistic distribution (unit)</a></li>
 </ul>
 
     </div>
@@ -372,7 +372,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Logistic distribution (unit): specification, parameter estimation, sampling</h1>
+    <h1>Logistic distribution (unit)</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -408,11 +408,12 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="logistic-distribution-unit-specification-parameter-estimation-sampling">
-<h1>Logistic distribution (unit): specification, parameter estimation, sampling<a class="headerlink" href="#logistic-distribution-unit-specification-parameter-estimation-sampling" title="Permalink to this heading">#</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="logistic-distribution-unit">
+<h1>Logistic distribution (unit)<a class="headerlink" href="#logistic-distribution-unit" title="Permalink to this heading">#</a></h1>
+<p>Specification, parameter estimation, sampling</p>
 <p>Author: Jyri Kivinen (<a class="reference external" href="mailto:jyri&#46;kivinen&#37;&#52;&#48;lapinamk&#46;fi">jyri<span>&#46;</span>kivinen<span>&#64;</span>lapinamk<span>&#46;</span>fi</a>)</p>
-<p>Version: Draft as of 8 October, 2023.</p>
-<p>Version history: Initial version published on 4 Oct. 2023, some updates thereafter.</p>
+<p>Version: 19 November, 2023.</p>
+<p>Version history: Initial version published on 4 Oct. 2023, minor updates since 8 Oct. 2023.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># library imports</span>
@@ -455,7 +456,7 @@ in the context of artificial neural networks. Below we implement to evaluate the
     <span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span>  <span class="mf">1.</span><span class="o">/</span><span class="p">(</span><span class="mf">1.</span><span class="o">+</span><span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="p">(</span><span class="n">x</span><span class="o">-</span><span class="n">mu</span><span class="p">)</span><span class="o">/</span><span class="n">s</span><span class="p">)),</span> <span class="n">linewidth</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;$\mu=</span><span class="si">{}</span><span class="s1">, s=</span><span class="si">{}</span><span class="s1">$&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">mu</span><span class="p">,</span> <span class="n">s</span><span class="p">));</span>
 <span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;$x$&#39;</span><span class="p">)</span>
 <span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;$\mathrm</span><span class="si">{sig}</span><span class="s1">(x; \mu, s)=(1+\exp{\{-(x-\mu)/s\}})^{-1}$&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">();</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">legend</span><span class="p">();</span>
 </pre></div>
 </div>
 </div>
@@ -463,8 +464,8 @@ in the context of artificial neural networks. Below we implement to evaluate the
 <img alt="../_images/e7657b087d19824a9eb6ef584ae3aa38c224eb47814668b6b1443ae6fdd3636c.png" src="../_images/e7657b087d19824a9eb6ef584ae3aa38c224eb47814668b6b1443ae6fdd3636c.png" />
 </div>
 </div>
-<p>We can see that <span class="math notranslate nohighlight">\(\mu\)</span> “shifts” and <span class="math notranslate nohighlight">\(s\)</span> “streches” the graph. It can be conceived that the generalization could be used, e.g., in dealing with distributional shifts, or for example multitask/transfer learning; as an example, the <span class="math notranslate nohighlight">\(x\)</span> could be the linear response by the canonical network unit, and the <span class="math notranslate nohighlight">\(\mu\)</span> and <span class="math notranslate nohighlight">\(s\)</span> would be (additional, perhaps class/task/etc.-specific and particularly shared) parameters to tune - in the context of fine-tuning an obvious strategy would be to introduce the shifting and scaling parameters, and initialize their values so that the standard expression is obtained. Perhaps such have been already done.</p>
-<p>In the following, we will study it in a different context. We will use it in defining cumulative distribution function, and in fact it is cumulative distribution of the logistic distribution.</p>
+<p>We can see that <span class="math notranslate nohighlight">\(\mu\)</span> “shifts” and <span class="math notranslate nohighlight">\(s\)</span> “streches” the graph. It can be conceived that the generalization could be used, e.g., in dealing with distributional shifts (for doing domain adaptation as an example), or for example multitask/transfer learning (more generally); as an example, the <span class="math notranslate nohighlight">\(x\)</span> could be the linear response by the canonical network unit, and the <span class="math notranslate nohighlight">\(\mu\)</span> and <span class="math notranslate nohighlight">\(s\)</span> would be (additional, perhaps class/task/etc.-specific and particularly shared) parameters to tune - in the context of fine-tuning an obvious strategy would be to introduce the shifting and scaling parameters, and initialize their values so that the standard expression is obtained. Perhaps such have been already done.</p>
+<p>In the following, we will use it in defining cumulative distribution function, and in fact it is cumulative distribution of the logistic distribution.</p>
 </section>
 <section id="the-logistic-distribution">
 <h2>The logistic distribution<a class="headerlink" href="#the-logistic-distribution" title="Permalink to this heading">#</a></h2>
@@ -537,7 +538,7 @@ in the context of artificial neural networks. Below we implement to evaluate the
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># infrastructure creation</span>
 <span class="n">fix</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">[</span><span class="mi">12</span><span class="p">,</span> <span class="mi">12</span><span class="p">])</span>
 <span class="n">nsamples</span> <span class="o">=</span> <span class="mi">1000000</span><span class="p">;</span> <span class="n">nbins</span> <span class="o">=</span> <span class="mi">1000</span>
-<span class="n">bins</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="o">-</span><span class="mi">50</span><span class="p">,</span> <span class="mi">50</span><span class="p">,</span> <span class="n">nbins</span><span class="o">+</span><span class="mi">1</span><span class="p">);</span> <span class="n">bin_centers</span> <span class="o">=</span> <span class="mf">0.5</span><span class="o">*</span><span class="p">(</span><span class="n">bins</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">+</span><span class="n">bins</span><span class="p">[</span><span class="mi">1</span><span class="p">:])</span>
+<span class="n">bin_edges</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="o">-</span><span class="mi">50</span><span class="p">,</span> <span class="mi">50</span><span class="p">,</span> <span class="n">nbins</span><span class="o">+</span><span class="mi">1</span><span class="p">);</span> <span class="n">bin_centers</span> <span class="o">=</span> <span class="mf">0.5</span><span class="o">*</span><span class="p">(</span><span class="n">bin_edges</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">+</span><span class="n">bin_edges</span><span class="p">[</span><span class="mi">1</span><span class="p">:])</span>
 <span class="n">colors_hex</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">rcParams</span><span class="p">[</span><span class="s1">&#39;axes.prop_cycle&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">by_key</span><span class="p">()[</span><span class="s1">&#39;color&#39;</span><span class="p">]</span>
 
 <span class="c1"># sampling, histogram calculation, plotting</span>
@@ -545,7 +546,7 @@ in the context of artificial neural networks. Below we implement to evaluate the
 <span class="k">for</span> <span class="n">scale_index</span><span class="p">,</span> <span class="n">scale</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">scales</span><span class="p">):</span>
     <span class="n">linecolor</span> <span class="o">=</span> <span class="n">colors</span><span class="o">.</span><span class="n">to_rgb</span><span class="p">(</span><span class="n">colors_hex</span><span class="p">[</span><span class="n">scale_index</span><span class="p">])</span>
     <span class="n">samples</span> <span class="o">=</span> <span class="n">random_samples</span><span class="p">(</span><span class="n">size</span><span class="o">=</span><span class="n">nsamples</span><span class="p">,</span> <span class="n">loc</span><span class="o">=</span><span class="n">loc</span><span class="p">,</span> <span class="n">scale</span><span class="o">=</span><span class="n">scale</span><span class="p">)</span> 
-    <span class="p">[</span><span class="n">densities</span><span class="p">,</span> <span class="n">_</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">histogram</span><span class="p">(</span><span class="n">samples</span><span class="p">,</span> <span class="n">bins</span><span class="p">,</span> <span class="n">density</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+    <span class="p">[</span><span class="n">densities</span><span class="p">,</span> <span class="n">_</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">histogram</span><span class="p">(</span><span class="n">samples</span><span class="p">,</span> <span class="n">bin_edges</span><span class="p">,</span> <span class="n">density</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
     <span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">probability_density_function</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">loc</span><span class="o">=</span><span class="n">loc</span><span class="p">,</span> <span class="n">scale</span><span class="o">=</span><span class="n">scale</span><span class="p">),</span> 
             <span class="n">color</span><span class="o">=</span><span class="n">linecolor</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s1">&#39;solid&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="sa">r</span><span class="s1">&#39;$p(x|\mu=</span><span class="si">{}</span><span class="s1">, s=</span><span class="si">{}</span><span class="s1">)$&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">loc</span><span class="p">,</span> <span class="n">scale</span><span class="p">),</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.5</span><span class="p">)</span>
     <span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">bin_centers</span><span class="p">,</span> <span class="n">densities</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="n">linecolor</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s1">&#39;dashed&#39;</span><span class="p">,</span> 
@@ -555,7 +556,7 @@ in the context of artificial neural networks. Below we implement to evaluate the
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/11e6b3ec250dee28b360ec8e08e61bc7460a9e115197b8438b806c2e8d44edc5.png" src="../_images/11e6b3ec250dee28b360ec8e08e61bc7460a9e115197b8438b806c2e8d44edc5.png" />
+<img alt="../_images/dd94826c0b48131e398631559e5951366d0b77d4fde741cea2b42ffa8a52aa42.png" src="../_images/dd94826c0b48131e398631559e5951366d0b77d4fde741cea2b42ffa8a52aa42.png" />
 </div>
 </div>
 </section>
@@ -598,7 +599,7 @@ in the context of artificial neural networks. Below we implement to evaluate the
 <span class="c1"># -------------------------</span>
 
 <span class="c1"># Kullback-Leibler divergence of true to estimated distributions, D_KL (p||q), estimated using Monte Carlo</span>
-<span class="n">nsamples</span> <span class="o">=</span> <span class="mi">1000000</span> <span class="c1"># for Monte Carlo</span>
+<span class="n">nsamples</span> <span class="o">=</span> <span class="mi">1000000</span>
 <span class="n">samples</span> <span class="o">=</span> <span class="n">random_samples</span><span class="p">(</span><span class="n">size</span><span class="o">=</span><span class="n">nsamples</span><span class="p">,</span> <span class="n">loc</span><span class="o">=</span><span class="n">loc</span><span class="p">,</span> <span class="n">scale</span><span class="o">=</span><span class="n">scale</span><span class="p">)</span>
 <span class="n">KL_divergence_est</span> <span class="o">=</span> <span class="p">(</span><span class="mf">1.</span><span class="o">/</span><span class="n">nsamples</span><span class="p">)</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="n">probability_density_function</span><span class="p">(</span><span class="n">samples</span><span class="p">,</span> <span class="n">loc</span><span class="o">=</span><span class="n">loc</span><span class="p">,</span> <span class="n">scale</span><span class="o">=</span><span class="n">scale</span><span class="p">))</span> \
                                          <span class="o">-</span><span class="n">np</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="n">probability_density_function</span><span class="p">(</span><span class="n">samples</span><span class="p">,</span> <span class="n">loc</span><span class="o">=</span><span class="n">loc_est</span><span class="p">,</span> <span class="n">scale</span><span class="o">=</span><span class="n">scale_est</span><span class="p">)))</span>
@@ -619,7 +620,7 @@ in the context of artificial neural networks. Below we implement to evaluate the
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/d1458fc20568f03077e2070962b16da465ebef3e548c46714c16885300c8551f.png" src="../_images/d1458fc20568f03077e2070962b16da465ebef3e548c46714c16885300c8551f.png" />
+<img alt="../_images/3323f37433f0ff7679beabe6ecd408d3956eb179ca45bb7f65d3f2ac3f99813d.png" src="../_images/3323f37433f0ff7679beabe6ecd408d3956eb179ca45bb7f65d3f2ac3f99813d.png" />
 </div>
 </div>
 </section>
@@ -634,7 +635,7 @@ the derivatives of <span class="math notranslate nohighlight">\(\mathrm{sig}(x; 
 </section>
 <section id="the-quantile-function">
 <h3>The quantile function<a class="headerlink" href="#the-quantile-function" title="Permalink to this heading">#</a></h3>
-<p>Let us start with the equation <span class="math notranslate nohighlight">\(y=\frac{1}{1+\mathrm{exp}{\{-a}\}}\)</span>. Multiplying both sides by <span class="math notranslate nohighlight">\((1+\mathrm{exp}{\{-a}\})\)</span>, and then expanding and moving terms yields that <span class="math notranslate nohighlight">\(\mathrm{exp}{\{-a\}}=\frac{1-y}{y}\)</span>. Taking the natural logarithm of both sides, we get that <span class="math notranslate nohighlight">\(-a=\mathrm{log}{\{(1-y)/y\}}\)</span> and so <span class="math notranslate nohighlight">\(a=\mathrm{log}{\{y/(1-y)\}}\)</span>. Letting <span class="math notranslate nohighlight">\(a\)</span> equal to <span class="math notranslate nohighlight">\((x-\mu)/s\)</span> we obtain that <span class="math notranslate nohighlight">\(\frac{1}{s}(x-\mu)=\mathrm{log}{\{y/(1-y)\}}\)</span>, from which we get that <span class="math notranslate nohighlight">\(x=\mu + s \cdot\mathrm{log}{\{y/(1-y)\}}\)</span>. Thus we obtain that the inverse function, of the cumulative distribution function <span class="math notranslate nohighlight">\((1+\mathrm{exp}{\{-a}\})^{-1}=(1+\mathrm{exp}{\{-(x-\mu)/s}\})^{-1}\)</span> which equals to <span class="math notranslate nohighlight">\(\mathrm{sig}(x; \mu, s)=P(x| \mu, s)\)</span>, is thus <span class="math notranslate nohighlight">\(Q(y; \mu, s)=\mu + s\cdot\mathrm{log}{\{y/(1-y)\}}\)</span>. Of course the result applies for valid values of the variables.</p>
+<p>Let us start with the equation <span class="math notranslate nohighlight">\(y=\frac{1}{1+\mathrm{exp}{\{-a}\}}\)</span>. Multiplying both sides by <span class="math notranslate nohighlight">\((1+\mathrm{exp}{\{-a}\})\)</span>, and then expanding and moving terms yields that <span class="math notranslate nohighlight">\(\mathrm{exp}{\{-a\}}=\frac{1-y}{y}\)</span>. Taking the natural logarithm of both sides, we get that <span class="math notranslate nohighlight">\(-a=\mathrm{log}{\{(1-y)/y\}}\)</span> and so <span class="math notranslate nohighlight">\(a=\mathrm{log}{\{y/(1-y)\}}\)</span>. Letting <span class="math notranslate nohighlight">\(a\)</span> equal to <span class="math notranslate nohighlight">\((x-\mu)/s\)</span> we obtain that <span class="math notranslate nohighlight">\(\frac{1}{s}(x-\mu)=\mathrm{log}{\{y/(1-y)\}}\)</span>, from which we get that <span class="math notranslate nohighlight">\(x=\mu + s~\mathrm{log}{\{y/(1-y)\}}\)</span>. Thus we obtain that the inverse function, of the cumulative distribution function <span class="math notranslate nohighlight">\((1+\mathrm{exp}{\{-a}\})^{-1}=(1+\mathrm{exp}{\{-(x-\mu)/s}\})^{-1}\)</span> which equals to <span class="math notranslate nohighlight">\(\mathrm{sig}(x; \mu, s)=P(x| \mu, s)\)</span>, is thus <span class="math notranslate nohighlight">\(Q(y; \mu, s)=\mu + s~\mathrm{log}{\{y/(1-y)\}}\)</span>. Of course the result applies for valid values of the variables.</p>
 </section>
 <section id="the-kullback-leibler-divergence-estimate">
 <h3>The Kullback-Leibler divergence estimate<a class="headerlink" href="#the-kullback-leibler-divergence-estimate" title="Permalink to this heading">#</a></h3>
