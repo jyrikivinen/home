@@ -34,7 +34,7 @@ Master's project, The University of Edinburgh, 2012
 Alejandro Cartas<br>
 Master's project, The University of Edinburgh, 2011
 * <a href="https://aaltodoc.aalto.fi/handle/123456789/94414">Sharpness Based Analysis of Images with Low Depth of Field and the Effect
-of Depth of Field on Image Viewing</b><br>
+of Depth of Field on Image Viewing</a><br>
 Susanna Kangas<br>
 MSc (Tech) thesis, Helsinki University of Technology, 2007
 * <a href="https://aaltodoc.aalto.fi/handle/123456789/93028">Color Naming and Computational Prediction from Natural Images</a><br>
