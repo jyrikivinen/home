@@ -1,6 +1,7 @@
 # Academic portfolio
+<meta name="format-detection" content="telephone=no">
 
-Date: 18 November, 2023
+Date: 19 November, 2023
 
 ## 1. Basic information
 * **Name:** Jyri J. Kivinen, **Present employer**: <a href="https://www.lapinamk.fi/en">Lapland University of Applied Sciences</a>, **Position title:** Full-time Teacher, **Position start date:** 01/2023, **Position end date:** 12/2023 
@@ -14,7 +15,7 @@ Date: 18 November, 2023
 * **Positions of scientific expertise:** ..., 10-12/2018 (around 2 months): Visitor, <a href="https://www.turing.ac.uk/">The Alan Turing Institute</a> (collaborating primarily with Profs. <a href="https://www.turing.ac.uk/people/researchers/mark-girolami">Mark Girolami</a>, <a href="https://www.turing.ac.uk/people/former-researchers/chris-holmes">Chris Holmes</a>, and <a href="https://www.turing.ac.uk/people/researchers/kimmo-kaski">Kimmo Kaski</a>); 
   07/2015-12/2018: Postdoctoral Researcher, <a href="https://www.aalto.fi/en/department-of-computer-science">Department of Computer Science</a>, <a href="https://www.aalto.fi/en">Aalto University</a> (09/2016-12/2018 postdoc of Prof. Kimmo Kaski, <a href="https://www.aalto.fi/en/department-of-computer-science/complex-systems-0">Complex Systems</a> group, in 07/2015-08/2016 postdoc of Prof. <a href="http://users.ics.aalto.fi/praiko/">Tapani Raiko</a>, <a href="https://research.cs.aalto.fi/bayes/index.shtml">Deep Learning and Bayesian Modelling</a> group); 
   04/2014-06/2015: Post-Doctoral Fellow, Laboratoire d'informatique des systèmes adaptatifs (LISA, now <a href="https://mila.quebec/en/">Mila</a>; advisory by Profs. <a href="https://mila.quebec/en/person/aaron-courville/">Aaron Courville</a> and <a href="https://yoshuabengio.org/">Yoshua Bengio</a>), <a href="https://www.umontreal.ca/en/">Université de Montréal</a>; 
-  09/2009-12/2013: Research Post-Graduate Student, <a href="https://web.inf.ed.ac.uk/anc">Institute for Adaptive Neural Computation</a>, <a href="https://www.ed.ac.uk/informatics">School of Informatics</a>, <a href="https://www.ed.ac.uk/">The University of Edinburgh</a>; 
+  09/2009-12/2013: Research Post-Graduate Student, <a href="https://web.inf.ed.ac.uk/anc">Institute for Adaptive and Neural Computation</a>, <a href="https://www.ed.ac.uk/informatics">School of Informatics</a>, <a href="https://www.ed.ac.uk/">The University of Edinburgh</a>; 
   08/2006-01/2009: Visiting Researcher, International Computer Science Institute (<a href="https://www.icsi.berkeley.edu/icsi">ICSI</a>), Berkeley;
   09/2004-8/2007: Research Scholar (Tutkija-opiskelija), <a href="https://en.wikipedia.org/wiki/Helsinki_University_of_Technology">Helsinki University of Technology</a>; 
   10/2003-08/2004: Research Scientist (Tutkija), Helsinki University of Technology; 
