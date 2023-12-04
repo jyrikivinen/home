@@ -6,9 +6,9 @@ parts:
   - caption: Profile
     chapters:
     - file: personal/biography
-    - file: personal/contact
     - file: personal/academic_portfolio
     - file: personal/industrial_portfolio
+    - file: personal/contact
   - caption: Research
     chapters:
     - file: research/list_of_publications
