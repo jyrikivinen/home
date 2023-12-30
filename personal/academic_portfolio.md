@@ -6,7 +6,7 @@ Date: 30 November, 2023
 ## 1. Basic information
 * **Name:** Jyri J. Kivinen 
 * **Degrees:** Master of Science in Technology (<a href="http://www.cis.hut.fi">Computer and Information Science</a>), Helsinki University of Technology; Doctor of Philosophy (viva voce in 11/2013, passed with no corrections) in Informatics (<a href="https://web.inf.ed.ac.uk/anc/research/machine-learning">Machine Learning</a>), The University of Edinburgh
-* **Employment history:** 01-13/2022: Full-time Teacher, Lapland University of Technology; 
+* **Employment history:** 01-12/2023: Full-time Teacher, Lapland University of Technology; 
   01-12/2022: Senior Specialist, Lapland University of Technology; 
   02-12/2021: Full-time Teacher, Lapland University of Technology; 
   03/2019-01/2021: Senior Data Scientist, GE Healthcare Finland; 
