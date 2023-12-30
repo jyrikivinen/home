@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 
 
-<html lang="en" >
+<html lang="en" data-content_root="" >
 
   <head>
     <meta charset="utf-8" />
@@ -19,12 +19,12 @@
   </script>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../_static/styles/theme.css?digest=ac02cc09edc035673794" rel="stylesheet" />
-<link href="../_static/styles/bootstrap.css?digest=ac02cc09edc035673794" rel="stylesheet" />
-<link href="../_static/styles/pydata-sphinx-theme.css?digest=ac02cc09edc035673794" rel="stylesheet" />
+  <link href="../_static/styles/theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=5b4479735964841361fd" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
 
   
-  <link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=ac02cc09edc035673794" rel="stylesheet" />
+  <link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=5b4479735964841361fd" rel="stylesheet" />
   <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
@@ -38,9 +38,9 @@
     <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=ac02cc09edc035673794" />
-<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=ac02cc09edc035673794" />
-  <script src="../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=ac02cc09edc035673794"></script>
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=5b4479735964841361fd" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd" />
+  <script src="../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=5b4479735964841361fd"></script>
 
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
@@ -140,9 +140,11 @@ const thebe_selector_output = ".output, .cell_output"
   
     <div class="sidebar-primary-items__start sidebar-primary__section">
         <div class="sidebar-primary-item">
+
   
 
 <a class="navbar-brand logo" href="../intro.html">
+  
   
   
   
@@ -152,8 +154,8 @@ const thebe_selector_output = ".output, .cell_output"
       
     
     
-    <img src="../_static/picture.png" class="logo__image only-light" alt="Logo image"/>
-    <script>document.write(`<img src="../_static/picture.png" class="logo__image only-dark" alt="Logo image"/>`);</script>
+    <img src="../_static/picture.png" class="logo__image only-light" alt="Jyri Kivinen - Home"/>
+    <script>document.write(`<img src="../_static/picture.png" class="logo__image only-dark" alt="Jyri Kivinen - Home"/>`);</script>
   
   
 </a></div>
@@ -343,6 +345,7 @@ const thebe_selector_output = ".output, .cell_output"
 </button>
 
 
+
 <script>
 document.write(`
   <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
@@ -352,6 +355,7 @@ document.write(`
   </button>
 `);
 </script>
+
 
 <script>
 document.write(`
@@ -411,10 +415,11 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="logistic-distribution-unit">
 <h1>Logistic distribution (unit)<a class="headerlink" href="#logistic-distribution-unit" title="Permalink to this heading">#</a></h1>
-<p>Specification, parameter estimation, sampling</p>
-<p>Author: Jyri Kivinen (<a class="reference external" href="mailto:jyri&#46;kivinen&#37;&#52;&#48;lapinamk&#46;fi">jyri<span>&#46;</span>kivinen<span>&#64;</span>lapinamk<span>&#46;</span>fi</a>)</p>
-<p>Version: 19 November, 2023.</p>
+<p>Specification, sampling, parameter estimation.</p>
+<p>Author: Jyri J. Kivinen</p>
+<p>Version: 30 November, 2023.</p>
 <p>Version history: Initial version published on 4 Oct. 2023, minor updates since 8 Oct. 2023.</p>
+<p>Copyright: © 2023 Jyri J. Kivinen. All rights reserved.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># library imports</span>
@@ -465,16 +470,17 @@ in the context of artificial neural networks. Below we implement to evaluate the
 <img alt="../_images/e7657b087d19824a9eb6ef584ae3aa38c224eb47814668b6b1443ae6fdd3636c.png" src="../_images/e7657b087d19824a9eb6ef584ae3aa38c224eb47814668b6b1443ae6fdd3636c.png" />
 </div>
 </div>
-<p>We can see that <span class="math notranslate nohighlight">\(\mu\)</span> “shifts” and <span class="math notranslate nohighlight">\(s\)</span> “streches” the graph. It can be conceived that the generalization could be used, e.g., in dealing with distributional shifts (for doing domain adaptation as an example), or for example multitask/transfer learning (more generally); as an example, the <span class="math notranslate nohighlight">\(x\)</span> could be the linear response by a canonical network unit (/canonical linear response), and the <span class="math notranslate nohighlight">\(\mu\)</span> and <span class="math notranslate nohighlight">\(s\)</span> would be (additional, perhaps class/task/etc.-specific and particularly shared) parameters to tune - in the context of fine-tuning an obvious strategy would be to introduce the shifting and scaling parameters, and initialize their values so that the standard expression is obtained. As suggested and obvious, the type of formalism could, e.g., persist throughout the network (layers/channels/feature maps, etc.), potentially resulting in massive, reductions in the amount of needed data and tunable parameters, and increases in interpretability, extendability, and control, to name some potential benefits. Perhaps such have been already done.</p>
-<p>In the following, we will use it in defining cumulative distribution function, and in fact it is cumulative distribution of the logistic distribution.</p>
+<p>We can see that <span class="math notranslate nohighlight">\(\mu\)</span> “shifts” and <span class="math notranslate nohighlight">\(s\)</span> “streches” the graph.<a name="cite_ref-1"></a><span class="xref myst"><sup>[1]</sup></span>
+In the following, we will use it in defining cumulative distribution function, and in fact it is cumulative distribution of the logistic distribution.</p>
+<p><a name="cite_note-1"></a><span class="xref myst">[1]</span> It can be conceived that the generalization could be used, e.g., in dealing with distributional shifts (for doing domain adaptation as an example), or for example multitask/transfer learning (more generally); as an example, the <span class="math notranslate nohighlight">\(x\)</span> could be the linear response by a canonical network unit (/canonical linear response), and the <span class="math notranslate nohighlight">\(\mu\)</span> and <span class="math notranslate nohighlight">\(s\)</span> would be (additional, perhaps class/task/etc.-specific and particularly shared) parameters to tune - in the context of fine-tuning an obvious strategy would be to introduce the shifting and scaling parameters, and initialize their values so that the standard expression is obtained. As suggested and obvious, the type of formalism could, e.g., persist throughout the network (layers/channels/feature maps, etc.), potentially resulting in massive, reductions in the amount of needed data and tunable parameters, and increases in interpretability, extendability, and control, to name some potential benefits. Perhaps such have been already done.</p>
 </section>
 <section id="the-logistic-distribution">
 <h2>The logistic distribution<a class="headerlink" href="#the-logistic-distribution" title="Permalink to this heading">#</a></h2>
 <p>The cumulative distribution function of the distribution is <span class="math notranslate nohighlight">\(P(x|\mu, s)=\frac{1}{1+\mathrm{exp}{\{-(x-\mu)/s}\}}=\mathrm{sig}(x; \mu, s).\)</span></p>
 <p>We can obtain the probability density function by differentiation: <span class="math notranslate nohighlight">\(p(x|\mu, s)=\frac{\mathrm{d}}{\mathrm{dx}}P(x|\mu, s).\)</span></p>
-<p>With also a bit of algebra, we can obtain that <span class="math notranslate nohighlight">\(p(x|\mu, s)=\frac{1}{s}\mathrm{sig}(x; \mu, s)(1-\mathrm{sig}(x; \mu, s)).\)</span></p>
-<p>The form may not be previously that well-known (for example, <a href="https://en.wikipedia.org/wiki/Logistic_distribution">Wikipedia, page generated 8 Oct., 2023</a> does not mention it), but I find it a natural one in/for the neural networks/machine learning context. Note that the expression also equals to <span class="math notranslate nohighlight">\(\frac{\mathrm{d}}{\mathrm{dx}}\mathrm{sig}(x; \mu, s)\)</span> and how simply and nicely the form changes by the generalization; the classical/standard form is obtained by plugging in <span class="math notranslate nohighlight">\(\mu=0\)</span>, <span class="math notranslate nohighlight">\(s=1\)</span>. See Appendix for further derivations.</p>
-<p>Below we implement Python-functions to evaluate the functions, and plot the probability density function and cumulative distribution function with several parameter value configurations. As we can see, the parameter <span class="math notranslate nohighlight">\(\mu\)</span> is a location parameter, and <span class="math notranslate nohighlight">\(s\)</span> controls the scale (which needs to be positive).</p>
+<p>With also a bit of algebra, we can obtain that <span class="math notranslate nohighlight">\(p(x|\mu, s)=\frac{1}{s}\mathrm{sig}(x; \mu, s)(1-\mathrm{sig}(x; \mu, s)).\)</span><a name="cite_ref-2"></a><span class="xref myst"><sup>[2]</sup></span></p>
+<p>Below, we implement Python-functions to evaluate the functions, and plot the probability density function and cumulative distribution function with several parameter value configurations. As we can see, the parameter <span class="math notranslate nohighlight">\(\mu\)</span> is a location parameter, and <span class="math notranslate nohighlight">\(s\)</span> controls the scale (which needs to be positive).</p>
+<p><a name="cite_note-2"></a><span class="xref myst">[2]</span> The form may not be previously that well-known (for example, <a href="https://en.wikipedia.org/wiki/Logistic_distribution">Wikipedia, page generated 8 Oct., 2023</a> does not mention it), but I find it a natural one in/for the neural networks/machine learning context. Note that the expression also equals to <span class="math notranslate nohighlight">\(\frac{\mathrm{d}}{\mathrm{dx}}\mathrm{sig}(x; \mu, s)\)</span> and how simply and nicely the form changes by the generalization; the classical/standard form is obtained by plugging in <span class="math notranslate nohighlight">\(\mu=0\)</span>, <span class="math notranslate nohighlight">\(s=1\)</span>. See Appendix for further derivations.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">logistic_sigmoid</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">loc</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">scale</span><span class="o">=</span><span class="mi">1</span><span class="p">):</span>
@@ -523,7 +529,7 @@ in the context of artificial neural networks. Below we implement to evaluate the
 <section id="sampling-from-the-distribution-comparing-histogram-of-samples-to-pdf">
 <h2>Sampling from the distribution, comparing histogram of samples to pdf<a class="headerlink" href="#sampling-from-the-distribution-comparing-histogram-of-samples-to-pdf" title="Permalink to this heading">#</a></h2>
 <p>In order to draw samples, we can use the inverse-CDF method; to draw a sample, we draw a sample from a uniform distribution, <span class="math notranslate nohighlight">\(\dot{u}\sim \mathrm U(0, 1)\)</span>, and see for which random variable value the cumulative distribution function of the logistic distribution obtains the value, i.e., evaluate the inverse of the cumulative distribution function also known as the quantile function, at <span class="math notranslate nohighlight">\(\dot{u}\)</span>. The quantile function, is easily obtained (see e.g. the Appendix), and can be written as <span class="math notranslate nohighlight">\(Q(y| \mu, s) = \mu + s \log{\{y/(1-y)\}}.\)</span></p>
-<p>Below we implement a Python-function to draw samples from the distribution, and utilize it to draw samples from logistic distributions. We also compare density estimates via histograms of samples to the analytical pdfs, graphically via density (estimate) curves.</p>
+<p>Below, we implement a Python-function to draw samples from the distribution, and utilize it to draw samples from logistic distributions. We also compare density estimates via histograms of samples to the analytical pdfs, graphically via density (estimate) curves.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># function to draw samples from the distribution</span>
@@ -673,7 +679,7 @@ the derivatives of <span class="math notranslate nohighlight">\(\mathrm{sig}(x; 
               
               
                 <footer class="prev-next-footer">
-                  <!-- Previous / next buttons -->
+                  
 <div class="prev-next-area">
     <a class="left-prev"
        href="information.html"
@@ -735,6 +741,7 @@ By Jyri J. Kivinen
   
   <div class="footer-item">
     
+
   <p class="copyright">
     
       © Copyright 2023. All rights reserved.
@@ -761,8 +768,8 @@ By Jyri J. Kivinen
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../_static/scripts/bootstrap.js?digest=ac02cc09edc035673794"></script>
-<script src="../_static/scripts/pydata-sphinx-theme.js?digest=ac02cc09edc035673794"></script>
+  <script src="../_static/scripts/bootstrap.js?digest=5b4479735964841361fd"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd"></script>
 
   <footer class="bd-footer">
   </footer>

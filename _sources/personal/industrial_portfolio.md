@@ -1,4 +1,3 @@
 # Industrial portfolio
 
 Under construction
-
