@@ -1,12 +1,13 @@
 # Academic portfolio
 <meta name="format-detection" content="telephone=no">
 
-Date: 19 November, 2023
+Date: 30 November, 2023
 
 ## 1. Basic information
-* **Name:** Jyri J. Kivinen, **Present employer**: <a href="https://www.lapinamk.fi/en">Lapland University of Applied Sciences</a>, **Position title:** Full-time Teacher, **Position start date:** 01/2023, **Position end date:** 12/2023 
+* **Name:** Jyri J. Kivinen 
 * **Degrees:** Master of Science in Technology (<a href="http://www.cis.hut.fi">Computer and Information Science</a>), Helsinki University of Technology; Doctor of Philosophy (viva voce in 11/2013, passed with no corrections) in Informatics (<a href="https://web.inf.ed.ac.uk/anc/research/machine-learning">Machine Learning</a>), The University of Edinburgh
-* **Previous employment:** 01-12/2022: Senior Specialist, Lapland University of Technology; 
+* **Employment history:** 01-13/2022: Full-time Teacher, Lapland University of Technology; 
+  01-12/2022: Senior Specialist, Lapland University of Technology; 
   02-12/2021: Full-time Teacher, Lapland University of Technology; 
   03/2019-01/2021: Senior Data Scientist, GE Healthcare Finland; 
   07/2015-12/2018: Postdoctoral Researcher, Aalto University; ... 
@@ -25,7 +26,7 @@ Date: 19 November, 2023
 * **Co-operation with national and international research groups:**
   * 09/2016-12/2018 (varying times), while post-doctoral researcher at Aalto University: Research collaborators included <a href="http://www.finndiane.fi/">FinnDiane</a> (Folkhälsan, Helsinki University Central Hospital, University of Helsinki), Central Finland Central Hospital, The Alan Turing Institute, and industrial partners. The collaboration with the Alan Turing Institute that I contributed to, created a <a href="https://fcai.fi/news/2019/3/29/the-alan-turing-institute-to-work-with-the-finnish-centre-for-artificial-intelligence-on-data-science-research">Memorandum of
 Understanding</a> between the Finnish Center for Artificial Intelligence (<a href="https://fcai.fi/">FCAI</a>) and the Alan Turing Institute.
-  * 08/2006-01/2009: Visiting researcher at International Computer Science Institute, Berkeley, collaborating primarily with Dr. (now Prof.) <a href="http://www.ics.uci.edu/~sudderth/">Erik B. Sudderth</a> and Prof. <a href="http://www.cs.berkeley.edu/~jordan/">Michael I. Jordan</a> from Statistical Artificial Intelligence Lab (SAIL; led by Prof. Michal I. Jordan), <a href="https://www.berkeley.edu/">University of California, Berkeley</a>.
+  * 08/2006-01/2009: Visiting researcher at International Computer Science Institute, Berkeley, collaborating primarily with Dr. (now Prof.) <a href="http://www.ics.uci.edu/~sudderth/">Erik B. Sudderth</a> and Prof. <a href="http://www.cs.berkeley.edu/~jordan/">Michael I. Jordan</a> from Statistical Artificial Intelligence Lab (SAIL; led by Prof. Michael I. Jordan), <a href="https://www.berkeley.edu/">University of California, Berkeley</a>.
 * **Other international activities:**
   * PhD degree done in the University of Edinburgh (principal supervision by Prof. <a href="http://homepages.inf.ed.ac.uk/ckiw/">Christopher K. I. Williams</a>), research as a post-doctoral fellow at Université de Montréal (advised by Profs. Aaron Courville and Yoshua Bengio); see above for more details
 * **Experience of practical application of research findings:** Industrial collaboration (part-time) present since around 09/2016, also on several time periods before 08/2006
@@ -47,10 +48,10 @@ The need is increasing, e.g., to keep the development cycle as (humanly and natu
 * **Teaching experience:** (latest first) 
   * <u>Lapland University of Applied Sciences:</u> (teaching in English/Finnish)
     * 2023:
-      * Teacher (and responsible) of the course: R504D94-3001 - Machine learning algorithms, Autumn 2023; in English for Bachelor of Engineering (Machine Learning and Data Engineering, full time day studies) students, course held for the first time
+      * Teacher (and responsible) of the course: R504D94-3001 - Machine Learning Algorithms, Autumn 2023; in English for Bachelor of Engineering (Machine Learning and Data Engineering, full time day studies) students, course held for the first time
       * One of two teachers (shared responsibility): R504D97-3001 - Seminar: Machine Learning and Data Engineering, Autumn 2023; in English for Bachelor of Engineering (Machine Learning and Data Engineering, full time day studies) students
-      * One of two teachers of the course: YAMK164-3001 - Transformative technologies for future, Autumn 2023; in English with another person, for Master of Engineering students
-      * Teacher (and responsible) of the course: R504D95-3001 - Probability, statistics, and optimisation, Spring 2023; in English for Bachelor of Engineering (Ma- chine Learning and Data Engineering, full time day studies) students, course was held for the first time
+      * One of two teachers of the course: YAMK164-3001 - Transformative Technologies for Future, Autumn 2023; in English with another person, for Master of Engineering students
+      * Teacher (and responsible) of the course: R504D95-3001 - Probability, Statistics, and Optimisation, Spring 2023; in English for Bachelor of Engineering (Machine Learning and Data Engineering, full time day studies) students, course was held for the first time
     * 2022:
       * One of two teachers (shared responsibility) of the course: R504D97-3002 - Seminar: Machine Learning and Data Engineering, Autumn 2022; in English for Bachelor of Engineering (Machine Learning and Data Engineering, full time day studies) students, course was held for the first time
       * One of two teachers (shared responsibility) of the course: Data Analytics, Spring 2022; in English for Bachelor of Engineering (Machine Learning and Data Engineering, full time day studies) students, course was held for the first time
@@ -59,9 +60,9 @@ The need is increasing, e.g., to keep the development cycle as (humanly and natu
       * Teacher (and responsible) of the course: R501RL210-3002 - Algebra, Geometry, and Trigonometry, Autumn 2021; in Finnish for Bachelor of Engineering (Machine Learning and Data Engineering, full time day studies) students
       * Teacher (and responsible) of the course: R504T46OJ-19003 - Linear Algebra, Autumn 2021; in Finnish for Bachelor of Engineering (Information and Communication Technology, blended studies) students
       * Teacher (and responsible) of the course: R504TL167-3001 - Linear Algebra (advanced), Autumn 2021; in Finnish for Bachelor of Engineering (Information and Communication Technology, Civil Engineering, Land Surveying; full time day studies) students
-      * Teacher (and responsible) of the course: R604ML90-3001 - Mathematics for forestry engineers, Autumn 2021; in Finnish for Bachelor of Engineering (Forestry Engineering, blended studies) students
-      * Teacher (and responsible) of the course: TELU117OJ-19005 - Differential equations (advanced), Autumn 2021; in Finnish for Bachelor of Engineering (Information and Communication Technology, Civil Engineering, Land Surveying; full time day studies) students
-      * Guest lecturer: R599Y35-3001 - Intelligent data analytics and intelligent environments, Spring 2021; in Finnish for Master of Engineering (Knowledge Management) students
+      * Teacher (and responsible) of the course: R604ML90-3001 - Mathematics for Forestry Engineers, Autumn 2021; in Finnish for Bachelor of Engineering (Forestry Engineering, blended studies) students
+      * Teacher (and responsible) of the course: TELU117OJ-19005 - Differential Equations (advanced), Autumn 2021; in Finnish for Bachelor of Engineering (Information and Communication Technology, Civil Engineering, Land Surveying; full time day studies) students
+      * Guest lecturer: R599Y35-3001 - Intelligent Data analytics and Intelligent Environments, Spring 2021; in Finnish for Master of Engineering (Knowledge Management) students
   * <u>Aalto University:</u> (teaching in English)
       * Course lecturer, responsible teacher: CS-E4890 Deep Learning, Autumn 2017; the (new) course had, nearly 300 student enrollments, 3 lecturers, and 5 teaching assistants
       * Course lecturer, responsible teacher: CS-E4050 Special Course in Machine Learning and Data Science V (P), Autumn 2016 (Deep Learning); the only lecturer 
@@ -101,9 +102,10 @@ I have utilized state-of-the-art technological solutions in producing materials,
 
 ## 5. Other qualifications and merits
 * **Socially significant elected positions or expert assignments based on academic or pedagogical merit:**
-  * Selected to co-organize (with another person), and co-organized a workshop series on artificial intelligence for (human) learning (focus on study guidance and counselling services), under contract with Digivisio 2030 programme; the goal of the programme ”is to create an internationally esteemed learning ecosystem that widely benefits society as a whole” https://digivisio2030.fi/en/future-of-learning/, and it involves all of the 38 Finnish higher education institutions. The work will be used in the development of the ecosystem.
-  * Reviewed for conferences: International Conference on Machine Learning (ICML), International Conference on Artificial Neural Networks (ICANN), European Conference on Computer Vision (ECCV); have had to decline several review invitations (NeurIPS, NIPS, AISTATS; also leading conferences in their respective areas) due to lack of time 
+  * Program committee member for International Conference on Artificial Neural Networks (ICANN), 2014.  
+  * Reviewed for conferences: International Conference on Machine Learning (ICML), International Conference on Artificial Neural Networks (ICANN), European Conference on Computer Vision (ECCV); have had to decline several review invitations (NeurIPS, NIPS, AISTATS; also leading conferences in their respective areas) due to lack of time. 
   * Reviewed for journals: IEEE Transactions on Pattern Analysis and Machine Intelligence, IEEE Signal Processing Magazine, and IEEE Transactions on Signal Processing.
+  * Selected to co-organize (with another person), and co-organized a workshop series on artificial intelligence for (human) learning (focus on study guidance and counselling services), under contract with Digivisio 2030 programme; the goal of the programme ”is to create an internationally esteemed learning ecosystem that widely benefits society as a whole” https://digivisio2030.fi/en/future-of-learning/, and it involves all of the 38 Finnish higher education institutions. The work will be used in the development of the ecosystem.
 * **Significant elected positions based on academic and pedagogical qualifications, membership in working groups and committees, and other university‐level administrative duties:** 
   * 2022-2023: Entrance examination work, International UAS Exam (joint digital entrance exam of the Finnish Universities of Applied Sciences); interviewing (local) and expert panel membership work (nationwide)
 
@@ -147,7 +149,7 @@ In Proc., IEEE International Conference on Image Processing (ICIP), September 20
 * <a href="../research/documents/kivinen+sudderth+jordan_hdp-hmt_journal_article_draft.pdf">Hierarhical Dirichlet Process Hidden Markov Trees for Multiscale Image Analysis</a><br>
 Jyri J. Kivinen, Erik B. Sudderth, and Michael I. Jordan<br>
 Manuscript draft
-* <a href="https://digivisio2030.fi/en/publications/preliminary-study-ai-supported-guidance/">Artificial Intelligence for study guidance</a><br>
-  Jyri Kivinen and Olli Hotakainen<br>
+* <a href="https://digivisio2030.fi/en/publications/preliminary-study-ai-supported-guidance/">Artificial Intelligence for Study Guidance</a><br>
+  Olli Hotakainen and Jyri Kivinen<br>
   Digivisio 2030 -programme report (in Finnish), 2023
 * **The computational notes section on this website!**
