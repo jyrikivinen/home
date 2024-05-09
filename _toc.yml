@@ -21,4 +21,7 @@ parts:
     chapters:
     - file: computational_notes/information
     - file: computational_notes/logistic_distribution
-  
+  - caption: Physical tones
+    chapters:
+      - file: physical_tones/ambistance_framework
+      - file: physical_tones/urho_framework
