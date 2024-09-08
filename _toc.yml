@@ -6,8 +6,6 @@ parts:
   - caption: Profile
     chapters:
     - file: personal/biography
-    - file: personal/academic_portfolio
-    - file: personal/industrial_portfolio
     - file: personal/contact
   - caption: Research
     chapters:
